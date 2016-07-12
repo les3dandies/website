@@ -1,1201 +1,644 @@
-<!doctype html>
-<!--
-<meta charset="utf-8">
-<link rel="stylesheet" href="{{ '/static/style.css'|url }}">
-<title>{% block title %}Welcome{% endblock %} — les3Dandies</title>
-<body>
-  <header>
-    <h1>les3Dandies</h1>
-    <nav>
-      <ul class="nav navbar-nav">
-        <li{% if this._path == '/' %} class="active"{% endif
-                                      %}><a href="{{ '/'|url }}">Welcome</a></li>
-        {% for href, title in [
-        ['/blog', 'Blog'],
-        ['/projects', 'Projects'],
-        ['/about', 'About']
-        ] %}
-        <li{% if this.is_child_of(href) %} class="active"{% endif
-                                           %}><a href="{{ href|url }}">{{ title }}</a></li>
-        {% endfor %}
-      </ul>
-    </nav>
-  </header>
-  <div class="page">
-    {% block body %}{% endblock %}
-  </div>
-  <footer>
-    &copy; Copyright 2016 by Matthieu HANNE.
-  </footer>
-</body>
--->
-
-
-
-
-
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="Ari Rusmanto">
-    <title>Teplok - Responsive Landing Page</title>
-    
-    <!-- CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/animate.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link href="assets/css/style-responsive.css" rel="stylesheet">
-    <link href="assets/third/font-awesome/css/font-awesome.css" rel="stylesheet">
-    <link href="assets/third/hovericon/css/component.css" rel="stylesheet">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  
-  <!-- BODY WITH DATA STYPE FOR SCROLLSPY -->
-  <body class="tooltips" id="top" data-spy="scroll" data-target="#myScrollspy">
-    
-    <!-- START PAGE -->
-    <div class="wrapper">
-      
-      <!-- 
-        ===========================================
-        BEGIN HEADER SECTION
-        ===========================================
-      -->
-      <div id="header-landing">
-        <!-- NAV MENU WRAPPER FOR FIXED POSITION -->
-        <div id="nav-menu">
-          <!-- NAV MENU CONTAINER -->
-          <div class="container">
-            <!-- LOGO -->
-            <div id="logo">
-              <h1><a href="index.html"><i class="fa fa-flask"></i> teplok.</a></h1>
-            </div><!-- /#logo -->
-            <!-- END LOGO -->
-            <!-- NAV MENU -->
-            <div class="menus" id="myScrollspy">
-              <ul class="nav scroll-nav">
-                <li class="active"><a href="#top"><i class="fa fa-home"></i><span>Home</span></a></li>
-                <li><a href="#features"><i class="fa fa-laptop"></i><span>Features</span></a></li>
-                <li><a href="#services"><i class="fa fa-cog"></i><span>Services</span></a></li>
-                <li><a href="#portfolio"><i class="fa fa-flask"></i><span>Portfolio</span></a></li>
-                <li><a href="#blog"><i class="fa fa-coffee"></i><span>Blog</span></a></li>
-                <li><a href="#team"><i class="fa fa-users"></i><span>Team</span></a></li>
-                <li><a href="#contact"><i class="fa fa-envelope"></i><span>Contact</span></a></li>
-              </ul>
-            </div><!-- /.menus -->
-            <!-- END NAV MENU -->
-          </div><!-- /.container -->
-          <!-- END NAV MENU CONTAINER -->
-        </div><!-- /.nav-menu -->
-        <!-- END NAV MENU FIXED POSITION -->
-        
-        <!-- HEADER SECTION CONTENT -->
-        <div class="awesome-slogan">
-          <h2>Your <span>Awesome</span> Text <span>Goes Here</span></h2>
-          <h4>aku kelingan <span>jaman semono</span> pas iseh nganggo <span>teplok</span></h4>
-          <p>FOLLOW US</p>
-          <div class="clear"></div>
-          <div class="social-icons">
-            <a href="#fakelink" data-toggle="tooltip" title="Facebook"><img src="assets/img/social-icons/facebook.png" alt="Facebook icon"></a>
-            <a href="#fakelink" data-toggle="tooltip" title="Github"><img src="assets/img/social-icons/github.png" alt="Github icon"></a>
-            <a href="#fakelink" data-toggle="tooltip" title="Google+"><img src="assets/img/social-icons/gplus.png" alt="Gplus icon"></a>
-            <a href="#fakelink" data-toggle="tooltip" title="Liked In"><img src="assets/img/social-icons/likedin.png" alt="Linkedin icon"></a>
-            <a href="#fakelink" data-toggle="tooltip" title="Tumblr"><img src="assets/img/social-icons/tumblr.png" alt="Tumblr icon"></a>
-            <a href="#fakelink" data-toggle="tooltip" title="Twitter"><img src="assets/img/social-icons/twitter.png" alt="Twitter icon"></a>
-            <a href="#fakelink" data-toggle="tooltip" title="Vimeo"><img src="assets/img/social-icons/vimeo.png" alt="Vimeo icon"></a>
-            <a href="#fakelink" data-toggle="tooltip" title="Youtube"><img src="assets/img/social-icons/youtube.png" alt="Youtube icon"></a>
-          </div><!-- /.social-icons -->
-        </div><!-- /.awesome-slogan -->
-        <!-- END HEADER SECTION CONTENT -->
-      </div><!-- /.header-landing -->
-      <!-- 
-        ===========================================
-        END HEADER SECTION
-        ===========================================
-      -->
-      
-      
-      
-      
-      <!-- SEECTION THEME COLOR -->
-      <div class="section-theme-landing"></div>
-      <!-- END SECTION THEME COLOR -->
-      
-      
-      
-      
-      <!-- 
-        ===========================================
-        BEGIN FEATURES SECTION
-        ===========================================
-      -->
-      <div class="section-page-landing section-light-grey" id="features">
-        <div class="inner-section">
-          <div class="container">
-            <!-- SECTION TITLE -->
-            <h2 class="text-center">Main Features</h2>
-            
-            <!-- BEGIN FEATURES DESCRIPTION -->
-            <h4 class="text-center">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-            </h4>
-            <!-- END FEATURES DESCRIPTION -->
-            <!-- BEGIN FEATURES COLUMN -->
-            <div class="row">
-              <div class="col-md-3 col-sm-6">
-                <div class="the-box-landing border-hover-bottom text-center">
-                  <h4>RESPONSIVE DESIGN</h4>
-                  <img src="assets/img/flat-icon/s1.png" class="small-icon" alt="Features image">
-                  <p>
-                  Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius
-                  </p>
-                </div><!-- /.the-box-landing .border-hover-bottom .text-center -->
-              </div><!-- /.col-md-3 col-sm-6 -->
-              <div class="col-md-3 col-sm-6">
-                <div class="the-box-landing border-hover-bottom text-center">
-                  <h4>USE BOOTSTRAP 3.1.X</h4>
-                  <img src="assets/img/flat-icon/s2.png" class="small-icon" alt="Features image">
-                  <p>
-                  Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius
-                  </p>
-                </div><!-- /.the-box-landing .border-hover-bottom .text-center -->
-              </div><!-- /.col-md-3 .col-sm-6 -->
-              <div class="col-md-3 col-sm-6">
-                <div class="the-box-landing border-hover-bottom text-center">
-                  <h4>+ COMING SOON</h4>
-                  <img src="assets/img/flat-icon/s7.png" class="small-icon" alt="Features image">
-                  <p>
-                  Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius
-                  </p>
-                </div><!-- /.the-box-landing .border-hover-bottom .text-center -->
-              </div><!-- /.col-md-3 .col-sm-6 -->
-              <div class="col-md-3 col-sm-6">
-                <div class="the-box-landing border-hover-bottom text-center">
-                  <h4>EASY TO USE</h4>
-                  <img src="assets/img/flat-icon/s3.png" class="small-icon" alt="Features image">
-                  <p>
-                  Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius
-                  </p>
-                </div><!-- /.the-box-landing .border-hover-bottom .text-center -->
-              </div><!-- /.col-md-3 .col-sm-6 -->
-            </div><!-- /.row -->
-            <!-- END FEATURES COLUMN -->
-            
-            <!-- BEGIN CALL TO ACTION -->
-            <div class="the-box-landing border-color-left">
-              <div class="row">
-                <div class="col-sm-9">
-                  <h3>Nek sampeyan juga podo kelingan jaman semono iseh nggunake Teplok, monggo dipun kersakne hasil karya kulo</h3>
-                </div><!-- /.col-sm-9 -->
-                <div class="col-sm-3">
-                  <button class="btn btn-default btn-teplok btn-block btn-lg btn-purchase"><i class="fa fa-shopping-cart"></i> Purchase Item</button>
-                </div><!-- /.col-sm-3 -->
-              </div><!-- /.row -->
-            </div><!-- /.the-box-landing .border-color-left -->
-            <!-- END CALL TO ACTION -->
-          </div><!-- /.container -->
-        </div><!-- /.inner-section -->
-      </div><!-- /.section-page-landing .section-light-grey -->
-      <!-- 
-        ===========================================
-        END HEADER SECTION
-        ===========================================
-      -->
-      
-      
-      
-      
-      <!-- 
-        ===========================================
-        BEGIN SERVICES SECTION
-        ===========================================
-      -->
-      <div class="section-page-landing section-grey" id="services">
-        <div class="inner-section">
-          <div class="container">
-            <!-- BEGIN HEADING SECTION -->
-            <h2 class="text-center">Our Services</h2>
-            <!-- END HEADING SECTION -->
-            <!-- BEGIN SERVICES DESCRIPTION -->
-            <h4 class="text-center">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-            </h4>
-            <!-- END SERVICES DESCRIPTION -->
-            
-            <div class="hi-icon-effect-1 hi-icon-effect-1a">
-              <div class="row">
-                <div class="col-sm-3">
-                  <div class="the-box-landing the-box-transparent text-center">
-                    <h4>WEB DESIGN</h4>
-                    <a href="#fakelink" class="hi-icon hi-icon-screen">Web Design</a>
-                  </div><!-- /.the-box-landing .the-box-transparent .text-center -->
-                </div><!-- /.col-sm-3 -->
-                <div class="col-sm-3">
-                  <div class="the-box-landing the-box-transparent text-center">
-                    <h4>UI DESIGN</h4>
-                    <a href="#fakelink" class="hi-icon hi-icon-images">UI Design</a>
-                  </div><!-- /.the-box-landing .the-box-transparent .text-center -->
-                </div><!-- /.col-sm-3 -->
-                <div class="col-sm-3">
-                  <div class="the-box-landing the-box-transparent text-center">
-                    <h4>MOBILE APPS</h4>
-                    <a href="#fakelink" class="hi-icon hi-icon-mobile">Mobile Apps</a>
-                  </div><!-- /.the-box-landing .the-box-transparent .text-center -->
-                </div><!-- /.col-sm-3 -->
-                <div class="col-sm-3">
-                  <div class="the-box-landing the-box-transparent text-center">
-                    <h4>WEB HOSTING</h4>
-                    <a href="#fakelink" class="hi-icon hi-icon-archive">Web Hosting</a>
-                  </div><!-- /.the-box-landing .the-box-transparent .text-center -->
-                </div><!-- /.col-sm-3 -->
-              </div><!-- /.row -->
-            </div><!-- /.hi-icon-effect-1 .hi-icon-effect-1a -->
-            
-            <hr />
-            
-            <h2 class="text-center">What They Say About Us?</h2>
-            
-            
-            <!-- BEGIN TESTIMONIAL CAROUSEL -->
-            <div id="carousel-testimonial" class="carousel-landing carousel carousel-testimonial slide" data-ride="carousel">
-              <!-- BEGIN TESTIMONIAL ICON -->
-              <div class="testimonial-icon">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-comments-o fa-stack-1x fa-inverse"></i>
-                </span><!-- /.fa-stack .fa-lg -->
-              </div><!-- /.testimonial-icon -->
-              
-              <!-- Indicators -->
-              <ol class="carousel-indicators">
-                <li data-target="#carousel-testimonial" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-testimonial" data-slide-to="1"></li>
-                <li data-target="#carousel-testimonial" data-slide-to="2"></li>
-              </ol>
-              
-              <!-- Wrapper for slides -->
-              <div class="carousel-inner">
-                <div class="item active">
-                  <div class="testimonial-inner">
-                    <h5>&#34;
-                      Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi
-                      &#34;</h5>
-                    <h4 class="testimonial-name">Jessica Rice - Yogyakarta, <abbr title="Indonesia">ID</abbr></h4>
-                    <div class="testimonial-avatar">
-                      <img src="assets/img/avatar/ava-2.jpg" class="img-circle" alt="Avatar">
-                    </div><!-- /.testimonial-avatar -->
-                  </div><!-- /.testimonial-inner -->
-                </div><!-- /.item .active -->
-                <div class="item">
-                  <div class="testimonial-inner">
-                    <h5>&#34;
-                      Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi
-                      &#34;</h5>
-                    <h4 class="testimonial-name">Sam Bason - Tokyo, Japan</h4>
-                    <div class="testimonial-avatar">
-                      <img src="assets/img/avatar/ava-3.jpg" class="img-circle" alt="Avatar">
-                    </div><!-- /.testimonial-avatar -->
-                  </div><!-- /.testimonial-inner -->
-                </div><!-- /.item -->
-                <div class="item">
-                  <div class="testimonial-inner">
-                    <h5>&#34;
-                      Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi
-                      &#34;</h5>
-                    <h4 class="testimonial-name">Sara Curtis - London, UK</h4>
-                    <div class="testimonial-avatar">
-                      <img src="assets/img/avatar/ava-4.jpg" class="img-circle" alt="Avatar">
-                    </div><!-- /.testimonial-avatar -->
-                  </div><!-- /.testimonial-inner -->
-                </div><!-- /.item -->
-              </div><!-- /.carousel-inner -->
-            </div><!-- /.carousel-landing .carousel .carousel-testimonial .slide -->
-            <!-- END TESTIMONIAL CAROUSEL -->
-          </div><!-- /.container -->
-        </div><!-- /.inner-section -->
-      </div><!-- /.section-page-landing .section-grey -->
-      <!-- 
-        ===========================================
-        END SERVICES SECTION
-        ===========================================
-      -->
-      
-      
-      
-      
-      <!-- 
-        ===========================================
-        BEGIN PORTFOLIO SECTION
-        ===========================================
-      -->
-      <div class="section-page-landing" id="portfolio">
-        <div class="inner-section">
-          <!-- BEGIN MODAL PORTFOLIO -->
-          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <!-- MODAL HEADER -->
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                  <h4 class="modal-title" id="myModalLabel">Project name</h4>
-                </div>
-                <!-- MODAL BODY -->
-                <div class="modal-body">
-                  <img src="images/blog-img/image001.jpg" class="img-responsive" alt="Image portfolio">
-                  <hr />
-                  <div class="row">
-                    <div class="col-sm-4">
-                      <button class="btn btn-default btn-teplok btn-block">Launch project</button>
-                      <table class="table table-modal-project">
-                        <tbody>
-                          <tr><td><strong>Type</strong></td><td class="text-right">Photography</td></tr>
-                          <tr><td><strong>Client</strong></td><td class="text-right">Marlboro</td></tr>
-                          <tr><td><strong>Year</strong></td><td class="text-right">2014</td></tr>
-                        </tbody>
-                      </table>
-                    </div><!-- /.col-sm-4 -->
-                    <div class="col-sm-8">
-                      <p style="text-align: justify">
-                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-                      </p>
-                    </div><!-- /.col-sm-8 -->
-                  </div><!-- /.row -->
-                </div><!-- /.modal-body -->
-              </div><!-- /.modal-content -->
-            </div><!-- /.modal-dialog -->
-          </div><!-- /.modal .fade -->
-          <!-- END MODAL PORTFOLIO -->
-          
-          
-          <div class="container">
-            <h2 class="text-center">Our Work</h2>
-            <div class="portfolio-landing">
-              <!-- PORTFOLIO CATEGORY FILTER -->
-              <ul class="nav nav-pills nav-justified">
-                <li class="filter" data-filter="all">All</li>
-                <li class="filter" data-filter="web_design">Web Design</li>
-                <li class="filter" data-filter="ui_design">UI Design</li>
-                <li class="filter" data-filter="logo_design">Logo Design</li>
-                <li class="filter" data-filter="photography">Photography</li>
-                <li class="filter" data-filter="psd_template">PSD Template</li>
-              </ul>
-              <!-- END PORTFOLIO CATEGORY FILTER -->
-              <!-- BEGIN PORTFOLIO GRID CONTENT -->
-              <ul id="portfolio-grid">
-                <li class="mix ui_design">
-                  <div class="des">
-                    <h4>Project Name</h4>
-                    <p>Short descriptions</p>
-                    <p>
-                    <a data-toggle="modal" data-target="#myModal"><i class="fa fa-share"></i></a>
-                    <a href="#fakelink"><i class="fa fa-link"></i></a>
-                    </p>
-                  </div>
-                  <img src="images/image_small/image_small001.jpg" alt="Image portfolio">
-                </li>
-                <li class="mix logo_design">
-                  <div class="des">
-                    <h4>Project Name</h4>
-                    <p>Short descriptions</p>
-                    <p>
-                    <a data-toggle="modal" data-target="#myModal"><i class="fa fa-share"></i></a>
-                    <a href="#fakelink"><i class="fa fa-link"></i></a>
-                    </p>
-                  </div>
-                  <img src="images/image_small/image_small002.jpg" alt="Image portfolio">
-                </li>
-                <li class="mix photography">
-                  <div class="des">
-                    <h4>Project Name</h4>
-                    <p>Short descriptions</p>
-                    <p>
-                    <a data-toggle="modal" data-target="#myModal"><i class="fa fa-share"></i></a>
-                    <a href="#fakelink"><i class="fa fa-link"></i></a>
-                    </p>
-                  </div>
-                  <img src="images/image_small/image_small003.jpg" alt="Image portfolio">
-                </li>
-                <li class="mix ui_design">
-                  <div class="des">
-                    <h4>Project Name</h4>
-                    <p>Short descriptions</p>
-                    <p>
-                    <a data-toggle="modal" data-target="#myModal"><i class="fa fa-share"></i></a>
-                    <a href="#fakelink"><i class="fa fa-link"></i></a>
-                    </p>
-                  </div>
-                  <img src="images/image_small/image_small004.jpg" alt="Image portfolio">
-                </li>
-                <li class="mix web_design">
-                  <div class="des">
-                    <h4>Project Name</h4>
-                    <p>Short descriptions</p>
-                    <p>
-                    <a data-toggle="modal" data-target="#myModal"><i class="fa fa-share"></i></a>
-                    <a href="#fakelink"><i class="fa fa-link"></i></a>
-                    </p>
-                  </div>
-                  <img src="images/image_small/image_small005.jpg" alt="Image portfolio">
-                </li>
-                <li class="mix logo_design">
-                  <div class="des">
-                    <h4>Project Name</h4>
-                    <p>Short descriptions</p>
-                    <p>
-                    <a data-toggle="modal" data-target="#myModal"><i class="fa fa-share"></i></a>
-                    <a href="#fakelink"><i class="fa fa-link"></i></a>
-                    </p>
-                  </div>
-                  <img src="images/image_small/image_small006.jpg" alt="Image portfolio">
-                </li>
-                <li class="mix psd_template">
-                  <div class="des">
-                    <h4>Project Name</h4>
-                    <p>Short descriptions</p>
-                    <p>
-                    <a data-toggle="modal" data-target="#myModal"><i class="fa fa-share"></i></a>
-                    <a href="#fakelink"><i class="fa fa-link"></i></a>
-                    </p>
-                  </div>
-                  <img src="images/image_small/image_small007.jpg" alt="Image portfolio">
-                </li>
-                <li class="mix logo_design">
-                  <div class="des">
-                    <h4>Project Name</h4>
-                    <p>Short descriptions</p>
-                    <p>
-                    <a data-toggle="modal" data-target="#myModal"><i class="fa fa-share"></i></a>
-                    <a href="#fakelink"><i class="fa fa-link"></i></a>
-                    </p>
-                  </div>
-                  <img src="images/image_small/image_small008.jpg" alt="Image portfolio">
-                </li>
-                <li class="mix ui_design">
-                  <div class="des">
-                    <h4>Project Name</h4>
-                    <p>Short descriptions</p>
-                    <p>
-                    <a data-toggle="modal" data-target="#myModal"><i class="fa fa-share"></i></a>
-                    <a href="#fakelink"><i class="fa fa-link"></i></a>
-                    </p>
-                  </div>
-                  <img src="images/image_small/image_small009.jpg" alt="Image portfolio">
-                </li>
-                <li class="mix psd_template">
-                  <div class="des">
-                    <h4>Project Name</h4>
-                    <p>Short descriptions</p>
-                    <p>
-                    <a data-toggle="modal" data-target="#myModal"><i class="fa fa-share"></i></a>
-                    <a href="#fakelink"><i class="fa fa-link"></i></a>
-                    </p>
-                  </div>
-                  <img src="images/image_small/image_small010.jpg" alt="Image portfolio">
-                </li>
-                <li class="mix web_design">
-                  <div class="des">
-                    <h4>Project Name</h4>
-                    <p>Short descriptions</p>
-                    <p>
-                    <a data-toggle="modal" data-target="#myModal"><i class="fa fa-share"></i></a>
-                    <a href="#fakelink"><i class="fa fa-link"></i></a>
-                    </p>
-                  </div>
-                  <img src="images/image_small/image_small001.jpg" alt="Image portfolio">
-                </li>
-                <li class="mix psd_template">
-                  <div class="des">
-                    <h4>Project Name</h4>
-                    <p>Short descriptions</p>
-                    <p>
-                    <a data-toggle="modal" data-target="#myModal"><i class="fa fa-share"></i></a>
-                    <a href="#fakelink"><i class="fa fa-link"></i></a>
-                    </p>
-                  </div>
-                  <img src="images/image_small/image_small002.jpg" alt="Image portfolio">
-                </li>
-              </ul>
-              <!-- END PORTFOLIO GRID CONTENT -->
-            </div><!-- /.portfolio-landing -->
-          </div><!-- /.container -->
-        </div><!-- /.inner-section -->
-      </div><!-- /.section-page-landing -->
-      <!-- 
-        ===========================================
-        END PORTFOLIO SECTION
-        ===========================================
-      -->
-      
-      
-      
-      
-      
-      <!-- 
-        ===========================================
-        BEGIN PRICING TABLE SECTION
-        ===========================================
-      -->
-      <div class="section-page-landing section-transparent" id="pricing-table">
-        <div class="section-overlay">
-          <div class="inner-section">
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Primes - Landing Page Template</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="{{ 'http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800'|asseturl }}">
+        <link rel="stylesheet" href="{{ 'http://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700'|asseturl }}">
+        <link rel="stylesheet" href="{{ 'assets/bootstrap/css/bootstrap.min.css'|asseturl }}">
+        <link rel="stylesheet" href="{{ 'assets/font-awesome/css/font-awesome.min.css'|asseturl }}">
+        <link rel="stylesheet" href="{{ 'assets/elegant-icons/css/elegant-icons.min.css'|asseturl }}">
+        <link rel="stylesheet" href="{{ 'assets/ionicons/css/ionicons.min.css'|asseturl }}">
+        <link rel="stylesheet" href="{{ 'assets/owl-carousel/owl.carousel.css'|asseturl }}">
+        <link rel="stylesheet" href="{{ 'assets/owl-carousel/owl.theme.css'|asseturl }}">
+        <link rel="stylesheet" href="{{ 'assets/cubeportfolio/css/cubeportfolio.min.css'|asseturl }}">
+        <link rel="stylesheet" href="{{ 'assets/css/style.css'|asseturl }}">
+
+            <!--Colors-->
+            <!-- <link rel="stylesheet" type="text/css" href="{{ 'assets/css/colors/red.css'|asseturl }}"> -->
+            <!-- <link rel="stylesheet" type="text/css" href="{{ 'assets/css/colors/orange.css'|asseturl }}"> -->
+            <!-- <link rel="stylesheet" type="text/css" href="{{ 'assets/css/colors/green.css'|asseturl }}"> -->
+            <!-- <link rel="stylesheet" type="text/css" href="{{ 'assets/css/colors/lime.css'|asseturl }}"> -->
+            <!-- <link rel="stylesheet" type="text/css" href="{{ 'assets/css/colors/brown.css'|asseturl }}"> -->
+            <!-- <link rel="stylesheet" type="text/css" href="{{ 'assets/css/colors/blue.css'|asseturl }}"> -->
+            <!-- <link rel="stylesheet" type="text/css" href="{{ 'assets/css/colors/yellow.css'|asseturl }}"> -->
+             <!-- <link rel="stylesheet" type="text/css" href="{{ 'assets/css/colors/purple.css'|asseturl }}"> -->
+
+<!-- CSS FOR DEMO - NOT INCLUDED IN MAIN FILES -->
+        <link rel="stylesheet" href="{{ 'assets/css/switcher.css'|asseturl }}">
+<link rel="stylesheet" href="{{ 'assets/css/style1.css'|asseturl }}" id="colors"> 
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+
+    </head>
+
+    <body data-spy="scroll" data-offset="80">
+         <div class="navbar navbar-default navbar-fixed-top menu-top" role="navigation">
             <div class="container">
-              <h2 class="text-center">Pricing Table</h2>
-              
-              <!-- PRICING TABLE COLUMN -->
-              <div class="row">
-                <div class="col-md-3 col-sm-6">
-                  <div class="pricing-table-landing">
-                    <div class="the-box-landing full">
-                      <div class="header"><h3>BRONZE</h3></div>
-                      <div class="circle-price-wrap">
-                        <h2>&#36;25<small>Per-Month</small></h2>
-                      </div>
-                      <table class="table table-inner table-striped">
-                        <tbody>
-                          <tr><td><strong>250MB</strong> Storage</td></tr>
-                          <tr><td><strong>2.5GB</strong> Monthly Bandwidth</td></tr>
-                          <tr><td><strong>Free</strong> Set up</td></tr>
-                          <tr><td><strong>10</strong> Email Accounts</td></tr>
-                          <tr><td><strong>1</strong> Add ons Domain</td></tr>
-                        </tbody>
-                        <tfoot>
-                          <tr><td>
-                              <a class="btn btn-primary">Purchase</a>
-                            </td></tr>
-                        </tfoot>
-                      </table>
-                    </div><!-- /.the-box-landing .full -->
-                  </div><!-- /.pricing-table-landing -->
-                </div><!-- /.col-md-3 .col-sm-6 -->
-                
-                <div class="col-md-3 col-sm-6">
-                  <div class="pricing-table-landing">
-                    <div class="the-box-landing full">
-                      <div class="header"><h3>SILVER</h3></div>
-                      <div class="circle-price-wrap">
-                        <h2>&#36;50<small>Per-Month</small></h2>
-                      </div>
-                      <table class="table table-inner table-striped">
-                        <tbody>
-                          <tr><td><strong>500MB</strong> Storage</td></tr>
-                          <tr><td><strong>5GB</strong> Monthly Bandwidth</td></tr>
-                          <tr><td><strong>Free</strong> Set up</td></tr>
-                          <tr><td><strong>25</strong> Email Accounts</td></tr>
-                          <tr><td><strong>2</strong> Add ons Domain</td></tr>
-                        </tbody>
-                        <tfoot>
-                          <tr><td>
-                              <a class="btn btn-primary">Purchase</a>
-                            </td></tr>
-                        </tfoot>
-                      </table>
-                    </div><!-- /.the-box-landing .full -->
-                  </div><!-- /.pricing-table-landing -->
-                </div><!-- /.col-md-3 .col-sm-6 -->
-                
-                <div class="col-md-3 col-sm-6">
-                  <div class="pricing-table-landing best-choice">
-                    <div class="the-box-landing full">
-                      <div class="header">
-                        <h3>GOLD</h3>
-                      </div>
-                      <div class="circle-price-wrap">
-                        <h2>&#36;100<small>Per-Month</small></h2>
-                      </div>
-                      <table class="table table-inner table-striped">
-                        <tbody>
-                          <tr><td><strong>1GB</strong> Storage</td></tr>
-                          <tr><td><strong>10GB</strong> Monthly Bandwidth</td></tr>
-                          <tr><td><strong>Free</strong> Set up</td></tr>
-                          <tr><td><strong>100</strong> Email Accounts</td></tr>
-                          <tr><td><strong>5</strong> Add ons Domain</td></tr>
-                        </tbody>
-                        <tfoot>
-                          <tr><td>
-                              <a class="btn btn-default btn-teplok">Purchase</a>
-                            </td></tr>
-                        </tfoot>
-                      </table><!-- /.table table-inner .table-striped -->
-                    </div><!-- /.the-box-landing full -->
-                  </div><!-- /.pricing-table-landing .best-choice -->
-                </div><!-- /.col-md-3 .col-sm-6 -->
-                
-                <div class="col-md-3 col-sm-6">
-                  <div class="pricing-table-landing">
-                    <div class="the-box-landing full">
-                      <div class="header">
-                        <h3>PLATINUM</h3>
-                      </div>
-                      <div class="circle-price-wrap">
-                        <h2>&#36;250<small>Per-Month</small></h2>
-                      </div>
-                      <table class="table table-inner table-striped">
-                        <tbody>
-                          <tr><td><strong>3GB</strong> Storage</td></tr>
-                          <tr><td><strong>50GB</strong> Monthly Bandwidth</td></tr>
-                          <tr><td><strong>Free</strong> Set up</td></tr>
-                          <tr><td><strong>200</strong> Email Accounts</td></tr>
-                          <tr><td><strong>10</strong> Add ons Domain</td></tr>
-                        </tbody>
-                        <tfoot>
-                          <tr><td>
-                              <a class="btn btn-primary">Purchase</a>
-                            </td></tr>
-                        </tfoot>
-                      </table>
-                    </div><!-- /.the-box-landing .full -->
-                  </div><!-- /.pricing-table-landing -->
-                </div><!-- /.col-md-3 .col-sm-6 -->
-              </div><!-- /.row -->
-              <!-- END PRICING TABLE COLUMN -->
-              
-            </div><!-- /.container -->
-          </div><!-- /.inner-section -->
-        </div><!-- /.section-overlay -->
-      </div><!-- /.section-page-landing .section-transparent -->
-      <!-- 
-        ===========================================
-        END PRICING TABLE SECTION
-        ===========================================
-      -->
-      
-      
-      
-      
-      
-      <!-- 
-        ===========================================
-        BEGIN BLOG SECTION
-        ===========================================
-      -->
-      <div class="section-page-landing" id="blog">
-        <div class="inner-section">
-          <div class="container">
-            <h2 class="text-center">From the Blog</h2>
-            
-            <!-- BLOG STYLE 1 -->
-            <div class="row">
-              <div class="col-md-3 col-sm-6">
-                <div class="the-box-landing full the-box-light-grey blog-landing">
-                  <div class="blog-column">
-                    <div class="img-wrap">
-                      <a href="blog-detail.html">
-                        <span class="show-link-icon"><i class="fa fa-link"></i></span>
-                        <img src="images/blog-img/image003.jpg" alt="Image blog">
-                      </a>
-                    </div>
-                    <div class="blog-column-des">
-                      <h3><a href="blog-detail.html">Duis autem vel eum iriure dolor in hendrerit in vulputate</a></h3>
-                      <p class="additional">By <a href="#fakelink">John Doe</a> about 12 hours ago</p>
-                      <a href="blog-detail.html" class="btn btn-default btn-teplok"><i class="fa fa-angle-right"></i>Read more</a>
-                    </div><!-- /.blog-column-des -->
-                  </div><!-- /.blog-column -->
-                </div><!-- /.the-box-landing .full the-box-light-grey .blog-landing -->
-              </div><!-- /.col-md-3 .col-sm-6 -->
-              
-              <div class="col-md-3 col-sm-6">
-                <div class="the-box-landing full the-box-light-grey blog-landing">
-                  <div class="blog-column">
-                    <div class="img-wrap">
-                      <a href="blog-detail.html">
-                        <span class="show-link-icon"><i class="fa fa-link"></i></span>
-                        <img src="images/blog-img/image002.jpg" alt="Image blog">
-                      </a>
-                    </div><!-- /.img-wrap -->
-                    <div class="blog-column-des">
-                      <h3><a href="blog-detail.html">Duis autem vel eum iriure dolor in hendrerit in vulputate</a></h3>
-                      <p class="additional">By <a href="#fakelink">John Doe</a> about 12 hours ago</p>
-                      <a href="blog-detail.html" class="btn btn-default btn-teplok"><i class="fa fa-angle-right"></i>Read more</a>
-                    </div><!-- /.blog-column-des -->
-                  </div><!-- /.blog-column -->
-                </div><!-- /.the-box-landing .full .the-box-light-grey .blog-landing -->
-              </div><!-- /.col-md-3 .col-sm-6 -->
-              
-              <div class="col-md-3 col-sm-6">
-                <div class="the-box-landing full the-box-light-grey blog-landing">
-                  <div class="blog-column">
-                    <div class="img-wrap">
-                      <a href="blog-detail.html">
-                        <span class="show-link-icon"><i class="fa fa-link"></i></span>
-                        <img src="images/blog-img/image001.jpg" alt="Image blog">
-                      </a>
-                    </div><!-- /.img-wrap -->
-                    <div class="blog-column-des">
-                      <h3><a href="blog-detail.html">Duis autem vel eum iriure dolor in hendrerit in vulputate</a></h3>
-                      <p class="additional">By <a href="#fakelink">John Doe</a> about 12 hours ago</p>
-                      <a href="blog-detail.html" class="btn btn-default btn-teplok"><i class="fa fa-angle-right"></i>Read more</a>
-                    </div><!-- /.blog-column-des -->
-                  </div><!-- /.blog-column -->
-                </div><!-- /.the-box-landing .full the-box-light-grey .blog-landing -->
-              </div><!-- /.col-md-3 .col-sm-6 -->
-              
-              <div class="col-md-3 col-sm-6">
-                <div class="the-box-landing full the-box-light-grey blog-landing">
-                  <div class="blog-column">
-                    <div class="img-wrap">
-                      <a href="blog-detail.html">
-                        <span class="show-link-icon"><i class="fa fa-link"></i></span>
-                        <img src="images/blog-img/image003.jpg" alt="Image blog">
-                      </a>
-                    </div><!-- /.img-wrap -->
-                    <div class="blog-column-des">
-                      <h3><a href="blog-detail.html">Duis autem vel eum iriure dolor in hendrerit in vulputate</a></h3>
-                      <p class="additional">By <a href="#fakelink">John Doe</a> about 12 hours ago</p>
-                      <a href="blog-detail.html" class="btn btn-default btn-teplok"><i class="fa fa-angle-right"></i>Read more</a>
-                    </div><!-- /.blog-column-des -->
-                  </div><!-- /.blog-column -->
-                </div><!-- /.the-box-landing .full the-box-light-grey .blog-landing -->
-              </div><!-- /.col-md-3 .col-sm-6 -->
-            </div><!-- /.row -->
-            <!-- END BLOG STYLE 1 -->
-            
-            
-            
-            <h4 class="text-center">YOU CAN ALSO USE THE FOLLOWING STYLE</h4>
-            
-            <!-- BLOG STYLE 2 -->
-            <div class="row">
-              <div class="col-md-6 col-sm-12">
-                <div class="the-box-landing full the-box-light-grey blog-landing border-color-left">
-                  <div class="blog-latest-img">
-                    <a href="blog-detail.html">
-                      <span class="show-link-icon"><i class="fa fa-link"></i></span>
-                      <img src="images/blog-img/image001.jpg" alt="Image blog">
-                    </a>
-                  </div><!-- /.blog-latest-img -->
-                  <div class="blog-latest-des">
-                    <h3><a href="blog-detail.html">Duis autem vel eum iriure dolor in hendrerit in vulputate</a></h3>
-                    <p class="additional">By <a href="#fakelink">John Doe</a> about 9 hours ago</p>
-                    <a href="blog-detail.html" class="btn btn-default btn-teplok"><i class="fa fa-angle-right"></i>Read more</a>
-                  </div><!-- /.blog-latest-des -->
-                </div><!-- /.the-box-landing .full .the-box-light-grey .blog-landing .border-color-left -->
-              </div><!-- /.col-md-6 .col-sm-12 -->
-              <div class="col-md-6 col-sm-12">
-                <div class="the-box-landing full the-box-light-grey blog-landing border-color-left">
-                  <div class="blog-latest-img">
-                    <a href="blog-detail.html">
-                      <span class="show-link-icon"><i class="fa fa-link"></i></span>
-                      <img src="images/blog-img/image002.jpg" alt="Image blog">
-                    </a>
-                  </div><!-- /.blog-latest-img -->
-                  <div class="blog-latest-des">
-                    <h3><a href="blog-detail.html">Duis autem vel eum iriure dolor in hendrerit in vulputate</a></h3>
-                    <p class="additional">By <a href="#fakelink">John Doe</a> about 9 hours ago</p>
-                    <a href="blog-detail.html" class="btn btn-default btn-teplok"><i class="fa fa-angle-right"></i>Read more</a>
-                  </div><!-- /.blog-latest-des -->
-                </div><!-- /.the-box-landing .full .the-box-light-grey .blog-landing .border-color-left -->
-              </div><!-- /.col-md-6 .col-sm-12 -->
-              <div class="col-md-6 col-sm-12">
-                <div class="the-box-landing full the-box-light-grey blog-landing border-color-left">
-                  <div class="blog-latest-img">
-                    <a href="blog-detail.html">
-                      <span class="show-link-icon"><i class="fa fa-link"></i></span>
-                      <img src="images/blog-img/image003.jpg" alt="Image blog">
-                    </a>
-                  </div><!-- /.blog-latest-img -->
-                  <div class="blog-latest-des">
-                    <h3><a href="blog-detail.html">Duis autem vel eum iriure dolor in hendrerit in vulputate</a></h3>
-                    <p class="additional">By <a href="#fakelink">John Doe</a> about 9 hours ago</p>
-                    <a href="blog-detail.html" class="btn btn-default btn-teplok"><i class="fa fa-angle-right"></i>Read more</a>
-                  </div><!-- /.blog-latest-des -->
-                </div><!-- /.the-box-landing .full .the-box-light-grey .blog-landing .border-color-left -->
-              </div><!-- /.col-md-6 .col-sm-12 -->
-              <div class="col-md-6 col-sm-12">
-                <div class="the-box-landing full the-box-light-grey blog-landing border-color-left">
-                  <div class="blog-latest-img">
-                    <a href="blog-detail.html">
-                      <span class="show-link-icon"><i class="fa fa-link"></i></span>
-                      <img src="images/blog-img/image001.jpg" alt="Image blog">
-                    </a>
-                  </div><!-- /.blog-latest-img -->
-                  <div class="blog-latest-des">
-                    <h3><a href="blog-detail.html">Duis autem vel eum iriure dolor in hendrerit in vulputate</a></h3>
-                    <p class="additional">By <a href="#fakelink">John Doe</a> about 9 hours ago</p>
-                    <a href="blog-detail.html" class="btn btn-default btn-teplok"><i class="fa fa-angle-right"></i>Read more</a>
-                  </div><!-- /.blog-latest-des -->
-                </div><!-- /.the-box-landing .full .the-box-light-grey .blog-landing .border-color-left -->
-              </div><!-- /.col-md-6 .col-sm-12 -->
-            </div><!-- /.row -->
-            <!-- END BLOG STYLE 2 -->
-          </div><!-- /.container -->
-        </div><!-- /.inner-section -->
-      </div><!-- /.section-page-landing -->
-      <!-- 
-        ===========================================
-        END BLOG SECTION
-        ===========================================
-      -->
-      
-      
-      
-      
-      
-      <!-- 
-        ===========================================
-        BEGIN TEAM SECTION
-        ===========================================
-      -->
-      <div class="section-page-landing section-light-grey" id="team">
-        <div class="inner-section">
-          <div class="container">
-            <h2 class="text-center">Meet Our Team</h2>
-            
-            <!-- TEAM COLUMN -->
-            <div class="row">
-              <div class="col-md-3 col-sm-6">
-                <div class="the-box-landing text-center the-team-landing full">
-                  <div class="ava-wrap">
-                    <div class="see-detail"></div>
-                    <div class="button-link">
-                      <a href="#fakelink"><i class="fa fa-facebook"></i></a>
-                      <a href="#fakelink"><i class="fa fa-twitter"></i></a>
-                      <a href="#fakelink"><i class="fa fa-google-plus"></i></a>
-                    </div>
-                    <img src="assets/img/avatar/ava-1.jpg" alt="Image team">
-                  </div><!-- /.ava-wrap -->
-                  <div class="des">
-                    <h3>Randy Gibson</h3>
-                    <h5>-ART DIRECTOR-</h5>
-                  </div><!-- /.des -->
-                </div><!-- /.the-box-landing .text-center .the-team-landing full -->
-              </div><!-- /.col-md-3 .col-sm-6 -->
-              <div class="col-md-3 col-sm-6">
-                <div class="the-box-landing text-center the-team-landing full">
-                  <div class="ava-wrap">
-                    <div class="see-detail"></div>
-                    <div class="button-link">
-                      <a href="#fakelink"><i class="fa fa-facebook"></i></a>
-                      <a href="#fakelink"><i class="fa fa-twitter"></i></a>
-                      <a href="#fakelink"><i class="fa fa-google-plus"></i></a>
-                    </div>
-                    <img src="assets/img/avatar/ava-8.jpg" alt="Image team">
-                  </div><!-- /.ava-wrap -->
-                  <div class="des">
-                    <h3>Jennifer Watkins</h3>
-                    <h5>-UI DESIGNER-</h5>
-                  </div><!-- /.des -->
-                </div><!-- /.the-box-landing .text-center .the-team-landing full -->
-              </div><!-- /.col-md-3 .col-sm-6 -->
-              <div class="col-md-3 col-sm-6">
-                <div class="the-box-landing text-center the-team-landing full">
-                  <div class="ava-wrap">
-                    <div class="see-detail"></div>
-                    <div class="button-link">
-                      <a href="#fakelink"><i class="fa fa-facebook"></i></a>
-                      <a href="#fakelink"><i class="fa fa-twitter"></i></a>
-                      <a href="#fakelink"><i class="fa fa-google-plus"></i></a>
-                    </div>
-                    <img src="assets/img/avatar/ava-7.jpg" alt="Image team">
-                  </div><!-- /.ava-wrap -->
-                  <div class="des">
-                    <h3>Bobby Morgan</h3>
-                    <h5>-COPYWRITER-</h5>
-                  </div><!-- /.des -->
-                </div><!-- /.the-box-landing .text-center .the-team-landing .full -->
-              </div><!-- /.col-md-3 .col-sm-6 -->
-              <div class="col-md-3 col-sm-6">
-                <div class="the-box-landing text-center the-team-landing full">
-                  <div class="ava-wrap">
-                    <div class="see-detail"></div>
-                    <div class="button-link">
-                      <a href="#fakelink"><i class="fa fa-facebook"></i></a>
-                      <a href="#fakelink"><i class="fa fa-twitter"></i></a>
-                      <a href="#fakelink"><i class="fa fa-google-plus"></i></a>
-                    </div>
-                    <img src="assets/img/avatar/ava-6.jpg" alt="Image team">
-                  </div><!-- /.ava-wrap -->
-                  <div class="des">
-                    <h3>Amanda Hart</h3>
-                    <h5>-PHOTOGRAPHER-</h5>
-                  </div><!-- /.des -->
-                </div><!-- /.the-box-landing .text-center .the-team-landing .full -->
-              </div><!-- /.col-md-3 .col-sm-6 -->
-              <div class="clearfix visible-xs"></div>
-              <div class="col-md-3 col-sm-6">
-                <div class="the-box-landing text-center the-team-landing full">
-                  <div class="ava-wrap">
-                    <div class="see-detail"></div>
-                    <div class="button-link">
-                      <a href="#fakelink"><i class="fa fa-facebook"></i></a>
-                      <a href="#fakelink"><i class="fa fa-twitter"></i></a>
-                      <a href="#fakelink"><i class="fa fa-google-plus"></i></a>
-                    </div>
-                    <img src="assets/img/avatar/ava-9.jpg" alt="Image team">
-                  </div><!-- /.ava-wrap -->
-                  <div class="des">
-                    <h3>Louis Thompson</h3>
-                    <h5>-GRAPHIC DESIGNER-</h5>
-                  </div><!-- /.des -->
-                </div><!-- /.the-box-landing .text-center .the-team-landing .full -->
-              </div><!-- /.col-md-3 .col-sm-6 -->
-              
-              <!-- YOU CAN USE THIS COLUMN FOR HIRING INFORMATION -->
-              <div class="col-md-9 col-sm-6">
-                <div class="the-box-landing full text-center the-box-transparent">
-                  <h2>We're hiring, join with us...</h2>
-                  <h4>
-                    Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima.
-                  </h4>
-                  <button class="btn btn-default btn-teplok btn-lg btn-distance"><i class="fa fa-cloud-upload"></i> Submit your application</button>
-                  <p class="text-danger">*note : all in one zipped file</p>
-                </div><!-- /.the-box-landing .full .text-center .the-box-transparent -->
-              </div><!-- /.col-md-9 .col-sm-6 -->
-            </div><!-- /.row -->
-            <!-- END TEAM COLUMN -->
-          </div><!-- /.container -->
-        </div><!-- /.inner-section -->
-      </div><!-- /.section-page-landing .section-light-grey -->
-      <!-- 
-        ===========================================
-        END TEAM SECTION
-        ===========================================
-      -->
-      
-      
-      
-      
-      
-      <!-- 
-        ===========================================
-        BEGIN CLIENT SECTION
-        ===========================================
-      -->
-      <div class="section-page-landing section-grey" id="client">
-        <div class="inner-section">
-          <div class="container text-center">
-            <h2 class="text-center">Our Clients</h2>
-            <div class="clients">
-              <div class="row">
-                <div class="col-md-2 col-xs-6">
-                  <a href="#fakelink"><img src="images/client-logo/google-logo.png" alt="Image client"></a>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{{ '#home'|asseturl }}"><i class="fa fa-star-half-o"></i> PRIMES</a>
                 </div>
-                <div class="col-md-2 col-xs-6">
-                  <a href="#fakelink"><img src="images/client-logo/wordpress-logo.png" alt="Image client"></a>
-                </div>
-                <div class="col-md-2 col-xs-6">
-                  <a href="#fakelink"><img src="images/client-logo/yahoo-logo.png" alt="Image client"></a>
-                </div>
-                <div class="col-md-2 col-xs-6">
-                  <a href="#fakelink"><img src="images/client-logo/marlboro-logo.png" alt="Image client"></a>
-                </div>
-                <div class="col-md-2 col-xs-6">
-                  <a href="#fakelink"><img src="images/client-logo/microsoft-logo.png" alt="Image client"></a>
-                </div>
-                <div class="col-md-2 col-xs-6">
-                  <a href="#fakelink"><img src="images/client-logo/nokia-logo.png" alt="Image client"></a>
-                </div><!-- /.col-md-2 col-xs-6 -->
-              </div><!-- /.row -->
-            </div><!-- /.clients -->
-          </div><!-- /.container .text-center -->
-        </div><!-- /.inner-section -->
-      </div><!-- /.section-page-landing .section-grey -->
-      <!-- 
-        ===========================================
-        END CLIENT SECTION
-        ===========================================
-      -->
-      
-      
-      
-      
-      <!-- 
-        ===========================================
-        BEGIN QUOTE OF THE DAY SECTION
-        ===========================================
-      -->
-      <div class="section-page-landing section-transparent" id="quote">
-        <div class="section-overlay">
-          <div class="inner-section">
-            <div class="container text-center">
-              <div class="quote">
-                <h1>&#34;If you can't make it good at least make it look good&#34;</h1>
-                <h3>- Bill Gates</h3>
-              </div><!-- /.quote -->
-            </div><!-- /.container text-center -->
-          </div><!-- /.inner-section -->
-        </div><!-- /.section-overlay -->
-      </div><!-- /.section-page-landing .section-transparent -->
-      <!-- 
-        ===========================================
-        END QUOTE OF THE DAY SECTION
-        ===========================================
-      -->
-      
-      
-      
-      
-      <!-- 
-        ===========================================
-        BEGIN CONTACT SECTION
-        ===========================================
-      -->
-      <div class="section-page-landing" id="contact">
-        <div class="inner-section">
-          <div class="container">
-            <h2 class="text-center">Get in Touch</h2>
-            <form role="form" class="contact-form" id="ContactForm" method="post">
-              <div class="row">
-                <div class="col-sm-4">
-                  <div class="form-group">
-                    <input type="text" name="YourName" class="form-control" placeholder="Your name">
-                  </div>
-                </div>
-                <div class="col-sm-4">
-                  <div class="form-group">
-                    <input type="email" name="YourEmail" class="form-control" placeholder="Your email">
-                  </div>
-                </div>
-                <div class="col-sm-4">
-                  <div class="form-group">
-                    <input type="text" name="YourWebsite" class="form-control" placeholder="Your website">
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" name="YourMessage" style="height: 200px" placeholder="Your message"></textarea>
-              </div>
-              <div class="row">
-                <div class="col-sm-5">
-                </div>
-                <div class="col-sm-2">
-                  <div class="form-group">
-                    <h4 class="text-center" id="SimpleCaptcha"></h4>
-                    <input type="text" name="captcha" class="form-control" placeholder="Result">
-                  </div>
-                </div>
-                <div class="col-sm-5">
-                </div>
-              </div>
-              <p class="text-center">
-              <button type="submit" class="btn btn-default btn-teplok"><i class="fa fa-envelope"></i>Submit</button>
-              </p>
-            </form>
-          </div><!-- /.container -->
-        </div><!-- /.inner-section -->
-      </div><!-- /.section-page-landing -->
-      <!-- 
-        ===========================================
-        END CONTACT SECTION
-        ===========================================
-      -->
-      
-      
-      
-      
-      <!-- 
-        ===========================================
-        BEGIN FOOTER SECTION
-        ===========================================
-      -->
-      <footer>
-        <div class="container">
-          <div class="row text-center">
-            <div class="col-sm-3">
-              <h5>ABOUT US</h5>
-              <p>
-              Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-              <br />
-              <a href="#fakelink">Read more</a>
-              </p>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="{{ '#home'|asseturl }}">Home</a></li>
+                        <li><a href="{{ '#features-section'|asseturl }}">Features</a></li>
+                        <li><a href="{{ '#services-section'|asseturl }}">Services</a></li>
+
+                        <li><a href="{{ '#portfolio-section'|asseturl }}">Portfolio</a></li>
+                        <li><a href="{{ '#pricing-section'|asseturl }}">Pricing</a></li>
+                        <li><a href="{{ '#contact-section'|asseturl }}">Contact</a></li>
+                    </ul>
+                </div> 
             </div>
-            <div class="col-sm-3">
-              <h5>NAV MENUS</h5>
-              <ul>
-                <li><a href="#fakelink">Template Features</a></li>
-                <li><a href="#fakelink">Our Services</a></li>
-                <li><a href="#fakelink">Our Portfolio</a></li>
-                <li><a href="blog-list.html">Blog Page</a></li>
-                <li><a href="#fakelink">Contact Us</a></li>
-              </ul>
-            </div>
-            <div class="col-sm-3">
-              <h5>OUR LOCATION</h5>
-              <address>
-                <strong>Teplok - Responsive Landing Template</strong><br>
-                Ds. Jatirejo RT 02/21 No 25A<br>
-                Sendangadi, Mlati, Sleman<br>
-                Yogyakarta, Indonesia<br>
-                <abbr title="Phone">P:</abbr> (+6274) 123-4567
-              </address>
-              
-              <address>
-                <strong>Email : </strong><br>
-                <a href="mailto:#">first.last@example.com</a>
-              </address>
-            </div>
-            <div class="col-sm-3">
-              <h5>SUBSCRIBE</h5>
-              <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,</p>
-              <form role="form" method="POST" class="form-subscribe">
-                <div class="input-group">
-                  <input type="text" class="form-control" placeholder="Email address">
-                  <span class="input-group-btn">
-                    <button class="btn btn-default btn-teplok" type="button"><i class="fa fa-chevron-right"></i></button>
-                  </span>
-                </div>
-              </form>
-              <p>*we never send junks</p>
-            </div><!-- /.col-sm-3 -->
-          </div><!-- /.row .text-center -->
-        </div><!-- /.container -->
+        </div> 
+
+        <!-- Top content -->
+        <div id="home" class="parallax top-content" data-stellar-background-ratio="0.3">
+            <div class="inner-bg">
+                <div class="container">
+                    <div class="row">
+
+			<div class="col-md-10 col-md-offset-1 top-description">
+				
+				<h2 class="text-center">
+				Launch Your <strong>Business</strong> with <strong>Primes</strong></h2>
+				
+					
+		<p>Vivamus commodo felis quis dui pharetra, ac venenatis magna lacinia. Vestibulum quis dignissim nibh. Duis vitae felis orci.</p>
+		                            <div class="top-button">
+                            	<a class="btn btn-top btn-lg" href="{{ '#portfolio-section'|asseturl }}"> Our Portfolio</a>
+                            	<a class="btn btn-top-white btn-lg" href="{{ '#features-section'|asseturl }}"> Learn More</a>
+                            </div>
+	
+					</div>
+                            </div>
+	
+					</div>
+
+			
+				</div>
+			</div>
+
+        <!-- Features -->
+        <div id="features-section" class="features-container">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-sm-12 features">
+	                    <h3>Features</h3>
+	                    <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+
+	                </div>
+	            </div>
+	            <div class="row">
+	                <div class="col-sm-4 features-box">
+	                	<div class="icon">
+	                		<i class="icon ion-ios-lightbulb-outline"></i>
+	                	</div>
+	                    <h4>Lorem Ipsum</h4>
+	                    <p>
+	                    	Phasellus dapibus lorem sit amet convallis posuere. Nulla a luctus nibh. Sed consectetur molestie dui, eu vestibulum risus pulvinar quis.
+	                    </p>
+                            	<a class="btn btn-features btn-lg" href="{{ '#'|asseturl }}"> Learn More</a>
+
+	                </div>
+	                <div class="col-sm-4 features-box">
+	                	<div class="icon">
+	                		<i class="icon ion-ios-flame-outline"></i>
+	                	</div>
+	                    <h4>Lorem Ipsum</h4>
+	                    <p>
+	                    	Phasellus dapibus lorem sit amet convallis posuere. Nulla a luctus nibh. Sed consectetur molestie dui, eu vestibulum risus pulvinar quis.
+
+	                    </p>
+                            	<a class="btn btn-features btn-lg" href="{{ '#'|asseturl }}"> Learn More</a>
+
+	                </div>
+	                <div class="col-sm-4 features-box">
+	                	<div class="icon">
+	                		<i class="icon ion-ios-flask-outline"></i>
+	                	</div>
+	                    <h4>Lorem Ipsum</h4>
+	                    <p>
+	                    	Phasellus dapibus lorem sit amet convallis posuere. Nulla a luctus nibh. Sed consectetur molestie dui, eu vestibulum risus pulvinar quis.
+
+	                    </p>
+                            	<a class="btn btn-features btn-lg" href="{{ '#'|asseturl }}"> Learn More</a>
+
+	                </div>
+	            </div>
+	        </div>
+        </div>
         
-        <div class="footer">
-          <div class="container">
-            &copy; 2014 <a href="#fakelink">Company Name</a><br />
-            <a href="#fakelink">Teplok - Responsive Landing Template</a> design with love by <a href="http://isohdesign.com" target="_blank">ID Studio</a> in Yogyakarta, <abbr title="Indonesia">ID</abbr>
-          </div><!-- /.container -->
-        </div><!-- /.footer -->
-      </footer>
-      <!-- 
-        ===========================================
-        END FOOTER SECTION
-        ===========================================
-      -->
-      
-      
-      <!-- BACK TO TOP BUTTON -->
-      <div id="back-top">
-        <a href="#top"><i class="fa fa-chevron-up"></i></a>
-      </div>
-      <!-- END BACK TO TOP -->
-      
-      
-    </div><!-- /.wrapper -->
-    <!-- END OF PAGE -->
-    
-    
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/third/validator/bootstrapValidator.min.js"></script>
-    <script src="assets/js/jquery.smooth-scroll.js"></script>
-    
-    <!-- REQUIRED FOR LANDING PAGE -->
-    <script src="assets/third/hovericon/js/modernizr.custom.js"></script>
-    <script src="assets/third/parallax/jquery.parallax-1.1.3.js"></script>
-    <script src="assets/third/parallax/TweenMax.min.js"></script>
-    <script src="assets/third/parallax/jquery.superscrollorama.js"></script>
-    <script src="assets/third/mixitup/jquery.mixitup.js"></script>
-    <script src="assets/third/backstretch/jquery.backstretch.min.js"></script>
-    <script>
-$.backstretch([
-    "images/image003.jpg",
-    "images/image004.jpg",
-    "images/image005.jpg"
-], {
-  fade: 750,
-    duration: 6000
-});
-    </script>
-    <script src="assets/js/teplok-one-page.js"></script>
-  </body>
+        
+        <!-- Services -->
+
+        <div id="services-section" class="services-container">
+	        <div class="container">
+	            <div class="row">
+
+	                <div class="col-sm-12 services">
+	                    <h3>Services</h3>
+	                    <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+				</div>
+			</div>
+			</div>
+
+
+	        <div class="container">
+	            <div class="row">
+
+				<div class="col-lg-6 col-sm-6">
+                        <div class="services-icon-wrap clearfix">
+                            <div class="left-side-icon">
+                                <i class="ion-ios-loop"></i>
+
+						</div>
+                            <div class="services-text-right">
+
+						<h5>Lorem Ipsum</h5>
+<p>Nulla fringilla dapibus nisieu accumsan arcu convallis tincidunt donec mauris libero laciniade mollis malesuade odio interdum. Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis. Praesent faucibus nisl sit amet nulla sollicitudin.</p>
+                            </div>
+                        </div> 
+					
+                        <div class="services-icon-wrap clearfix">
+                            <div class="left-side-icon">
+                                <i class="ion-social-buffer-outline"></i>
+
+						</div>
+                            <div class="services-text-right">
+
+						<h5>Lorem Ipsum</h5>
+<p>Nulla fringilla dapibus nisieu accumsan arcu convallis tincidunt donec mauris libero laciniade mollis malesuade odio interdum. Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis. Praesent faucibus nisl sit amet nulla sollicitudin.</p>
+                            </div>
+                        </div> 
+                            </div>
+
+				<div class="col-lg-6 col-sm-6">
+                        <div class="services-icon-wrap clearfix">
+                            <div class="left-side-icon">
+                                <i class="ion-social-windows-outline"></i>
+
+						</div>
+                            <div class="services-text-right">
+
+						<h5>Lorem Ipsum</h5>
+<p>Nulla fringilla dapibus nisieu accumsan arcu convallis tincidunt donec mauris libero laciniade mollis malesuade odio interdum. Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis. Praesent faucibus nisl sit amet nulla sollicitudin.</p>
+                            </div>
+                        </div> 
+					
+                        <div class="services-icon-wrap clearfix">
+                            <div class="left-side-icon">
+                                <i class="ion-ios-reload"></i>
+
+						</div>
+                            <div class="services-text-right">
+
+						<h5>Lorem Ipsum</h5>
+<p>Nulla fringilla dapibus nisieu accumsan arcu convallis tincidunt donec mauris libero laciniade mollis malesuade odio interdum. Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis. Praesent faucibus nisl sit amet nulla sollicitudin.</p>
+                            </div>
+                        </div> 
+
+				</div>
+			</div>
+		</div>
+		</div>
+
+	<!-- VIDEO SECTION -->
+	<div id="video" class="video-container">
+		<!--video iframe-->
+		<div class="video">
+			<iframe frameborder="0" height="281" src="http://player.vimeo.com/video/163694555?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff&amp;autoplay=0" width="640"></iframe>
+		</div>
+	</div>
+	<!-- VIDEO SECTION -->
+
+        <div id="portfolio-section" class="portfolio-container">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-sm-12 portfolio">
+
+	                    <h3>Portfolio</h3>
+	                    <p>Ut lobortis auctor est, quis ornare orci tristique vel. Pellentesque sit amet ultricies nisl.</p>
+
+	            </div>
+	            </div>
+
+
+
+    <div class="clearfix">
+
+        <div id="js-filters-lightbox-gallery2" class="cbp-l-filters-button cbp-l-filters-center">
+            <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">All</div>
+            <div data-filter=".graphic" class="cbp-filter-item">Graphic</div>
+            <div data-filter=".logos" class="cbp-filter-item">Logo</div>
+            <div data-filter=".motion" class="cbp-filter-item">Motion</div>
+        </div>
+    </div>
+
+    <div id="js-grid-lightbox-gallery" class="cbp">
+        <div class="cbp-item web-design graphic print motion">
+            <a href="{{ 'ajax-lightbox-gallery/project1.html'|asseturl }}" class="cbp-caption cbp-singlePageInline" data-title="World Clock Widget" rel="nofollow">
+                <div class="cbp-caption-defaultWrap">
+									<!-- <img src="assets/img/portfolio/1.jpg" alt=""> -->
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignLeft">
+                        <div class="cbp-l-caption-body">
+                            <div class="cbp-l-caption-title">World Clock Widget</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="cbp-item web-design logos identity graphic">
+            <a href="{{ 'ajax-lightbox-gallery/project2.html'|asseturl }}" class="cbp-caption cbp-singlePageInline" data-title="Bolt UI" rel="nofollow">
+                <div class="cbp-caption-defaultWrap">
+									<!-- <img src="assets/img/portfolio/2.jpg" alt=""> -->
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignLeft">
+                        <div class="cbp-l-caption-body">
+                            <div class="cbp-l-caption-title">Bolt UI</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="cbp-item graphic print identity">
+            <a href="{{ 'ajax-lightbox-gallery/project3.html'|asseturl }}" class="cbp-caption cbp-singlePageInline" data-title="WhereTO App" rel="nofollow">
+                <div class="cbp-caption-defaultWrap">
+									<!-- <img src="assets/img/portfolio/3.jpg" alt=""> -->
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignLeft">
+                        <div class="cbp-l-caption-body">
+                            <div class="cbp-l-caption-title">WhereTO App</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="cbp-item web-design motion logos">
+            <a href="{{ 'ajax-lightbox-gallery/project4.html'|asseturl }}" class="cbp-caption cbp-singlePageInline" data-title="iDevices" rel="nofollow">
+                <div class="cbp-caption-defaultWrap">
+									<!-- <img src="assets/img/portfolio/4.jpg" alt=""> -->
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignLeft">
+                        <div class="cbp-l-caption-body">
+                            <div class="cbp-l-caption-title">iDevices</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="cbp-item identity graphic print">
+            <a href="{{ 'ajax-lightbox-gallery/project5.html'|asseturl }}" class="cbp-caption cbp-singlePageInline" data-title="Seemple* Music for iPad" rel="nofollow">
+                <div class="cbp-caption-defaultWrap">
+									<!-- <img src="assets/img/portfolio/5.jpg" alt=""> -->
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignLeft">
+                        <div class="cbp-l-caption-body">
+                            <div class="cbp-l-caption-title">Seemple* Music for iPad</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="cbp-item motion print logos web-design">
+            <a href="{{ 'ajax-lightbox-gallery/project6.html'|asseturl }}" class="cbp-caption cbp-singlePageInline" data-title="Remind~Me Widget" rel="nofollow">
+                <div class="cbp-caption-defaultWrap">
+									<!-- <img src="assets/img/portfolio/6.jpg" alt=""> -->
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignLeft">
+                        <div class="cbp-l-caption-body">
+                            <div class="cbp-l-caption-title">Remind~Me Widget</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="cbp-item graphic logos">
+            <a href="{{ 'ajax-lightbox-gallery/project7.html'|asseturl }}" class="cbp-caption cbp-singlePageInline" data-title="Workout Buddy" rel="nofollow">
+                <div class="cbp-caption-defaultWrap">
+									<!-- <img src="assets/img/portfolio/7.jpg" alt=""> -->
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignLeft">
+                        <div class="cbp-l-caption-body">
+                            <div class="cbp-l-caption-title">Workout Buddy</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="cbp-item identity print logos motion">
+            <a href="{{ 'ajax-lightbox-gallery/project8.html'|asseturl }}" class="cbp-caption cbp-singlePageInline" data-title="Digital Menu" rel="nofollow">
+                <div class="cbp-caption-defaultWrap">
+									<!-- <img src="assets/img/portfolio/8.jpg" alt=""> -->
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignLeft">
+                        <div class="cbp-l-caption-body">
+                            <div class="cbp-l-caption-title">Digital Menu</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="cbp-item identity motion web-design">
+            <a href="{{ 'ajax-lightbox-gallery/project9.html'|asseturl }}" class="cbp-caption cbp-singlePageInline" data-title="Holiday Selector" rel="nofollow">
+                <div class="cbp-caption-defaultWrap">
+									<!-- <img src="assets/img/portfolio/9.jpg" alt=""> -->
+                </div>
+                <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignLeft">
+                        <div class="cbp-l-caption-body">
+                            <div class="cbp-l-caption-title">Holiday Selector</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div id="js-loadMore-lightbox-gallery" class="cbp-l-loadMore-button">
+        <a href="{{ 'ajax-lightbox-gallery/loadMore.html'|asseturl }}" class="cbp-l-loadMore-link" rel="nofollow">
+            <span class="cbp-l-loadMore-defaultText">Load More</span>
+            <span class="cbp-l-loadMore-loadingText">Loading...</span>
+            <span class="cbp-l-loadMore-noMoreLoading">No More Works</span>
+        </a>
+    </div>
+
+    </div>
+
+
+			</div>
+		</div>
+	</div>
+
+
+        <!-- Fact -->
+
+        <div id="fact-container" class="fact-container">
+	        <div class="container">
+            <div class="row">
+	                <div class="col-sm-3 fact-box">
+	                	<div class="icon">
+	                		<i class="icon ion-ios-alarm-outline"></i>
+	                	</div>
+	                    <h4>1754</h4>
+	                    <h5>hours worked</h5>
+
+	                </div>
+	                <div class="col-sm-3 fact-box">
+	                	<div class="icon">
+	                		<i class="icon ion-social-dropbox-outline"></i>
+	                	</div>
+	                    <h4>300</h4>
+	                    <h5>Finished projects</h5>
+
+	                </div>
+	                <div class="col-sm-3 fact-box">
+	                	<div class="icon">
+	                		<i class="icon ion-ios-cloud-download-outline"></i>
+	                	</div>
+	                    <h4>842</h4>
+	                    <h5>downloads</h5>
+
+	                </div>
+	                <div class="col-sm-3 fact-box">
+	                	<div class="icon">
+	                		<i class="icon ion-ios-person-outline"></i>
+	                	</div>
+	                    <h4>910</h4>
+	                    <h5>happy customers</h5>
+
+	                </div>
+</div>
+</div>
+</div>
+</div>
+
+        <!-- Pricing -->
+
+        <div id="pricing-section" class="pricing-container">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-sm-12 pricing">
+	                    <h3>Choose the package</h3>
+	                    <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 toLeft">
+					<div class="price-column">
+						<h2>Standard</h2>
+						<h3><span>From</span> $45<span>.99 per month</span></h3>
+						<ul>
+							<li>Vestibulum est magna</li>
+							<li>Mauris auctor massa libero</li>
+							<li>Praesent magna tortor</li>
+							<li>Cras et fermentum massa</li>
+						<li><button type="button" class="btn btn-top btn-lg">Purchase</button></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4 toIn">
+					<div class="price-column large">
+						<h2>Premium</h2>
+						<h3><span>From</span> $75<span>.00 per month</span></h3>
+						<ul>
+							<li>Vestibulum est magna</li>
+							<li>Mauris auctor massa libero</li>
+							<li>Praesent magna tortor</li>
+							<li>Cras et fermentum massa</li>
+						<li><button type="button" class="btn btn-top btn-lg">Purchase</button></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4 toRight">
+					<div class="price-column">
+						<h2>Ultimate</h2>
+						<h3><span>From</span> $99<span>.99 per month</span></h3>
+						<ul>
+							<li>Vestibulum est magna</li>
+							<li>Mauris auctor massa libero</li>
+							<li>Praesent magna tortor</li>
+							<li>Cras et fermentum massa</li>
+						<li><button type="button" class="btn btn-top btn-lg">Purchase</button></li>
+						</ul>
+
+					</div>
+				</div>
+			</div>
+			
+					</div>
+	
+		</div>
+
+
+   
+                <!-- Testimonials -->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 testimonials">
+                    <h3>What our customers have to say...</h3>
+
+                    <div class="col-md-12 text-center">
+                        <div id="testimonial-carousel" class="owl-carousel owl-spaced">
+                            <div>
+									<!-- <img src="assets/img/testimonials/1.jpg" alt="" class="img-responsive img-thumbnail" /> -->
+
+                                <h4>
+                                    Pellentesque sit amet augue a mi luctus laoreet ut nec velit. Morbi in fermentum elit. Curabitur pellentesque neque eget diam posuere porta. Aliquam imperdiet nulla id scelerisque auctor. Proin egestas mauris vel arcu bibendum ornare. 
+                                </h4>
+                                <p>-Diana Rosswert</p>
+                            </div>
+                            <div>
+									<!-- <img src="assets/img/testimonials/2.jpg" alt="" class="img-responsive img-thumbnail" /> -->
+
+                                <h4>
+                                    Pellentesque sit amet augue a mi luctus laoreet ut nec velit. Morbi in fermentum elit. Curabitur pellentesque neque eget diam posuere porta. Aliquam imperdiet nulla id scelerisque auctor. Proin egestas mauris vel arcu bibendum ornare. 
+                                </h4>
+                                <p>-Diana Rosswert</p>
+                            </div>
+                            <div>
+									<!-- <img src="assets/img/testimonials/3.jpg" alt="" class="img-responsive img-thumbnail" /> -->
+
+                                <h4>
+                                    Pellentesque sit amet augue a mi luctus laoreet ut nec velit. Morbi in fermentum elit. Curabitur pellentesque neque eget diam posuere porta. Aliquam imperdiet nulla id scelerisque auctor. Proin egestas mauris vel arcu bibendum ornare. 
+                                </h4>
+                                <p>-Diana Rosswert</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+
+        <!-- Contact us -->
+        <div id="contact-section" class="contact-container">
+
+            <div class="inner-contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 contact">
+                    <h3>Contact Us</h3>
+                    <p>
+                    	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra odio ac felis iaculis cursus aliquet quis orci. Nunc id lorem ut mi euismod accumsan. 
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-7 form-group contact-form">
+                    <h4>Send Message</h4>
+                    <form method="post" action="assets/contact.php">
+                        <input type="text" name="email" placeholder="Email" class="form-control contact-email">
+                        <input type="text" name="subject" placeholder="Subject" class="form-control contact-subject">
+                        <textarea name="message" class="form-control" placeholder="Message"></textarea>
+                        <button type="submit" class="btn btn-contact">Submit</button>
+                    </form>
+                </div>
+                <div class="col-sm-5 contact-address contact-about">
+                    <h4>About Us</h4>
+                    <p>Fusce at leo eros. Morbi mauris arcu, eleifend sit amet turpis ac, porta luctus neque. Etiam ultricies ac augue a venenatis. Quisque aliquam odio eu magna sodales, vel interdum erat suscipit. Mauris ut porttitor tellus. Integer ac bibendum lectus. Quisque interdum aliquam felis vel volutpat. Vivamus commodo felis quis dui pharetra, ac venenatis magna lacinia. Vestibulum quis dignissim nibh. Duis vitae felis orci. Aliquam porta interdum feugiat. Ut ac varius nibh. Nullam est nisl, sagittis sed risus vel, facilisis commodo tortor. Suspendisse suscipit tellus vitae tellus porta rutrum. Proin ac orci auctor, consequat dolor nec, scelerisque nisl.</p>
+                    <h4>Address</h4>
+                    <p><i class="fa fa-map-marker"></i>13 Brant Street, Burlington, Ontario, Canada</p>
+                    <p><i class="fa fa-phone"></i>Phone: 0011 222 335 7773</p>
+
+                </div>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        
+	<!-- footer -->
+	<div id="footer">
+	<h3>Follow Us!</h3>
+	<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse suscipit tellus vitae tellus porta rutrum. Aliquam imperdiet nulla id scelerisque auctor.</p>
+	<div class="follow-us">
+                        <a href="{{ '#'|asseturl }}" class="social-icon"><i class="fa fa-facebook"></i></a>
+                        <a href="{{ '#'|asseturl }}" class="social-icon"><i class="fa fa-twitter"></i></a>
+                        <a href="{{ '#'|asseturl }}" class="social-icon"><i class="fa fa-linkedin"></i></a>
+                        <a href="{{ '#'|asseturl }}" class="social-icon"><i class="fa fa-pinterest"></i></a>
+                        <a href="{{ '#'|asseturl }}" class="social-icon"><i class="fa fa-google-plus"></i></a>
+		</div>
+	</div>
+	<!-- footer 2 -->
+	<div id="footer2">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+				<div class="copyright">&copy;primes
+							<script type="text/javascript">
+							//<![CDATA[
+								var d = new Date()
+								document.write(d.getFullYear())
+								//]]>
+								</script>
+							  - <a href="{{ 'http://themebootstrap.net/'|asseturl }}">themebootstrap.net</a>
+						</div>
+						</div>
+					</div>
+				</div>
+					</div>
+                 <!-- STYLE SWITCHER - ONLY FOR DEMO NOT INCLUDED IN MAIN FILES-->
+  <div id="style-switcher">
+    <h2>Choose colors <a href="{{ '#'|asseturl }}"><span i class="fa fa-cogs" aria-hidden="true"></span></a></h2>
+
+
+    <div>
+      <ul class="colors" id="color1">
+        <li><a href="{{ '#'|asseturl }}" class="style1" title="default"></a></li>
+        <li><a href="{{ '#'|asseturl }}" class="style2" title="blue"></a></li>
+        <li><a href="{{ '#'|asseturl }}" class="style3" title="lime"></a></li>
+        <li><a href="{{ '#'|asseturl }}" class="style4" title="green"></a></li>
+        <li><a href="{{ '#'|asseturl }}" class="style5" title="red"></a></li>
+        <li><a href="{{ '#'|asseturl }}" class="style6" title="purple"></a></li>
+        <li><a href="{{ '#'|asseturl }}" class="style7" title="brown"></a></li>
+        <li><a href="{{ '#'|asseturl }}" class="style8" title="orange"></a></li>
+        <li><a href="{{ '#'|asseturl }}" class="style9" title="yellow"></a></li>
+
+      </ul>
+    </div>
+  </div>  <!-- END OF STYLE SWITCHER -->
+ 
+        <!-- Javascript -->
+        <script src="{{ 'assets/js/jquery-1.10.2.min.js'|url }}"></script>
+        <script src="{{ 'assets/bootstrap/js/bootstrap.min.js'|url }}"></script>
+        <script src="{{ 'assets/js/retina-1.1.0.min.js'|url }}"></script>
+        <script src="{{ 'assets/js/jquery.easing.1.3.min.js'|url }}"></script>
+        <script src="{{ 'assets/js/jquery.stellar.min.js'|url }}" type="text/javascript"></script>
+        <script src="{{ 'assets/owl-carousel/owl.carousel.min.js'|url }}"></script>
+        <script src="{{ 'assets/cubeportfolio/js/jquery.cubeportfolio.min.js'|url }}"></script>
+        <script src="{{ 'assets/js/cube.js'|url }}"></script>
+        <script src="{{ 'assets/js/script.js'|url }}"></script>
+        <script src="{{ 'assets/js/main.js'|url }}"></script>
+
+
+    </body>
+
 </html>
+
