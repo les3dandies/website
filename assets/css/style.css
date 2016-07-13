@@ -353,7 +353,7 @@ color: #888;
 }
 .navbar-default.menu-shrink{
     padding: 10px 0;
-	background-color: #af6c4f;
+	background-color: #451f13;
     border-bottom: 2px solid black;
     width:100%;
 }
@@ -365,11 +365,12 @@ color: #888;
     color: #f3f3f3 !important;
 }
 .navbar-default.menu-shrink .navbar-brand{
-    color: #323A45 !important;
+    color: #ffffff !important;
 }
 
 .navbar-default.menu-shrink li a{
-    color: #323A45 !important;
+    /*color: #323A45 !important;*/
+    color: #ffffff !important;
 }
 
 .navbar-default .navbar-toggle {
@@ -892,7 +893,8 @@ line-height: 24px;}
 .add-to-cart-btn{
   border: none;
   border-radius: 2px;
-  color: black;
+  font-size: 1.5em;
+  color: #fecf5b;
   margin-top: 5%;
   background: transparent;
   font-size: bold;
@@ -1043,12 +1045,12 @@ line-height: 24px;}
 
 .testimonials {
     margin-top: 60px;
-    padding-bottom: 70px;
+    /*padding-bottom: 70px;*/
     text-align: center;
 }
 
 .testimonials h3 {
-    padding-bottom: 50px;
+    /*padding-bottom: 50px;*/
   /*color: #323A45;*/
 	color: #451f13;
 }
@@ -1057,6 +1059,7 @@ line-height: 24px;}
     color:#555;
     font-weight: 300;
     line-height: 32px;
+    margin-bottom: 100px;
 }
 .testimonials  h4 i{
     color:#f99200;

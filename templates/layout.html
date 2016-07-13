@@ -61,9 +61,9 @@
                         <li><a href="{{ '#OurCollection' }}">Our collection</a></li>
                         <li><a href="{{ '#YourCreation' }}">Your creation</a></li>
 
+                        <li><a href="{{ '#OurTeam' }}">OurTeam</a></li>
                         <li><a href="{{ '#ContactUs' }}">Contact us</a></li>
-                        <li><a href="{{ '#portfolio-section' }}">Log In</a></li>
-                        <li><a href="{{ '#pricing-section' }}">Sign up</a></li>
+                        <!-- <li><a href="{{ '#pricing-section' }}">Sign up</a></li> -->
                     </ul>
                 </div> 
             </div>
@@ -78,8 +78,8 @@
 			<div class="col-md-10 col-md-offset-1 top-description">
 				
 				<h2 class="text-center">
-				<!-- Launch Your <strong>Business</strong> with <strong>Primes</strong></h2> -->
-                Savourez vos propres créations</h2>
+                Offrez à la <strong>gourmandise</strong> la dimension qu'elle mérite
+                </h2>
                 <p>Voir si on rajoute une phrase supplémentaire.</p>
 		                            <div class="top-button">
                             	<a class="btn btn-top btn-lg" href="{{ '#OurCollection' }}"> Our collection</a>
@@ -107,29 +107,29 @@
 	            </div>
 	            <div class="row">
 	                <div class="col-sm-4 features-box">
-                        <img src="{{ '/img/company.jpg'|url }}" alt="">
+                        <img src="{{ '/img/company.jpg'|url }}" height="240px" alt="">
 	                    <!-- <h4>Company</h4>
 	                    <p>
 	                    	Info about our company.
 	                    </p> -->
-                            	<a class="btn btn-features btn-lg"  data-toggle="collapse" data-target="#OurCompany" aria-expanded="false"> Company</a>
-                                <div id="OurCompany">
+                            	<a class="btn btn-features btn-lg collapsed"  data-toggle="collapse" data-target="#OurCompany" > Company</a>
+                                <div id="OurCompany" aria-expanded="false" class="collapse">
                                     <p>More info about the company</p>
                                 </div>
 
 	                </div>
 	                <div class="col-sm-4 features-box">
 	                	<img src="{{ '/img/process.jpg'|url }}" height="240px" alt="">
-                            	<a class="btn btn-features btn-lg"  data-toggle="collapse" data-target="#OurProcess" aria-expanded="false"> Process</a>
-                                <div id="OurProcess">
+                            	<a class="btn btn-features btn-lg collapsed"  data-toggle="collapse" data-target="#OurProcess" aria-expanded="false"> Process</a>
+                                <div id="OurProcess" aria-expanded="false" class="collapse">
                                     <p>More info about the process</p>
                                 </div>
 
 	                </div>
 	                <div class="col-sm-4 features-box">
 	                	<img src="{{ '/img/time.jpg'|url }}" height="240px" alt="">
-                            	<a class="btn btn-features btn-lg"  data-toggle="collapse" data-target="#OurDelivery" aria-expanded="false"> Delivery</a>
-                                <div id="OurDelivery">
+                            	<a class="btn btn-features btn-lg collapsed"  data-toggle="collapse" data-target="#OurDelivery" aria-expanded="false"> Delivery</a>
+                                <div id="OurDelivery" aria-expanded="false" class="collapse">
                                     <p>More info about the delivery</p>
                                 </div>
 
@@ -139,74 +139,6 @@
         </div>
         
         
-        <!-- Services -->
-
-        <div id="services-section" class="services-container">
-	        <div class="container">
-	            <div class="row" id="Process">
-
-	                <div class="col-sm-12 services">
-	                    <h3>Company, Process &#38; Delivery</h3>
-                        <p>Info in detail of company, process and delivery.</p>
-	                    <p>Another sentence ?</p>
-				</div>
-			</div>
-			</div>
-
-
-	        <div class="container">
-	            <div class="row">
-
-				<div class="col-lg-6 col-sm-6">
-                        <div class="services-icon-wrap clearfix">
-                            <!-- <div class="left-side-icon">
-                                <i class="ion-ios-loop"></i>
-
-						</div> -->
-                            <div class="services-text-right">
-
-						<h5>Company</h5>
-<p>Info about our company.</p>
-                            </div>
-                        </div> 
-					
-                        <div class="services-icon-wrap clearfix">
-                            <!-- <div class="left-side-icon">
-                                <i class="ion-social-buffer-outline"></i>
-
-						</div> -->
-                            <div class="services-text-right">
-
-						<h5>Process</h5>
-<p>Info about process (3D printer, ...).</p>
-                            </div>
-                        </div> 
-                            </div>
-
-				<div class="col-lg-6 col-sm-6">
-                        <div class="services-icon-wrap clearfix">
-<!--                             <div class="left-side-icon">
-                                <i class="ion-social-windows-outline"></i>
-
-						</div> -->
-                            <div class="services-text-right">
-
-						<h5>Delivery</h5>
-<p>Delivery, time creation...</p>
-                            </div>
-                        </div> 
-					
-                        <div class="services-icon-wrap clearfix">
-                            <!-- <div class="left-side-icon">
-                                <i class="ion-ios-reload"></i>
-
-						</div> -->
-                        </div> 
-
-				</div>
-			</div>
-		</div>
-		</div>
 
 	<!-- VIDEO SECTION -->
 	<!-- <div id="video" class="video-container"> -->
@@ -217,7 +149,7 @@
 	<!-- </div> -->
 	<!-- VIDEO SECTION -->
 
-        <div id="portfolio-section" class="portfolio-container">
+        <div id="OurCollection" class="portfolio-container">
 	        <div class="container">
 	            <div class="row">
 	                <div class="col-sm-12 portfolio" id="OurCollection">
@@ -236,7 +168,7 @@
             <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">All</div>
             <div data-filter=".graphic" class="cbp-filter-item">Designer</div>
             <div data-filter=".logos" class="cbp-filter-item">Category</div>
-            <div data-filter=".motion" class="cbp-filter-item">Type</div>
+            <div data-filter=".motion" class="cbp-filter-item">Chocolatier</div>
         </div>
     </div>
 
@@ -465,12 +397,12 @@
 
         <!-- Pricing -->
 
-        <div id="pricing-section" class="pricing-container">
+        <div id="YourCreation" class="pricing-container">
 	        <div class="container">
 	            <div class="row" id="YourCreation">
 	                <div class="col-sm-12 pricing">
 	                    <h3>Your creation</h3>
-	                    <p>Upload your 3D files or Take an appointment</p>
+	                    <p>Upload your 3D files or Make an appointment</p>
 				</div>
 			</div>
 			<div class="row">
@@ -483,28 +415,28 @@
                             <div class="input-group">
                                 <label class="input-group-btn">
                                     <span class="btn" id="BrowseButton">
-                                        Browse&hellip; <input type="file" style="display: none;" multiple>
+                                        Browse&hellip; <input type="file" style="display: none;" multiple id="3DfileUser">
                                     </span>
                                 </label>
                                 <input type="text" class="form-control" readonly>
                             </div>
                             </li>
-							<li>Let us yout phone or email and comments</li>
+							<li>Let us your phone or email and comments</li>
 							<li>
-                            <input type="tel" name="phone" class="form-control" placeholder="+1 (999) 999 9999"  />
-                            <input type="email" name="user_email" class="form-control" placeholder="les3Dandies@gmail.com"  />
+                            <input type="tel" name="phone" class="form-control" placeholder="+1 (999) 999 9999"  id="PhoneUser" />
+                            <input type="email" name="user_email" class="form-control" placeholder="les3Dandies@gmail.com" id="MailUser" />
                             </li>
 							<li>
                             <!-- <textarea name='comment' id='comment' placeholder="Let some comments here."></textarea><br /> -->
-                            <div contenteditable="true" id='comment'>Let some comments here.</div>
+                            <div contenteditable="true" id='CommentUser'>Let some comments here.</div>
                             </li>
-						<li><button type="button" class="btn btn-top btn-lg">Validate</button></li>
+						<li><button onclick="sendMailWithFile(); return false" class="btn btn-top btn-lg">Validate</button></li>
 						</ul>
 					</div>
 				</div>
 				<div class="col-md-6 toIn">
 					<div class="price-column large">
-						<h2>Take an appointment</h2>
+						<h2>Make an appointment</h2>
 						<h3>Call us between 9am and 7pm</h3>
 						<ul>
 							<li>Contact us : </li>
@@ -526,38 +458,37 @@
                 <!-- Testimonials -->
         <div class="container">
             <div class="row">
-                <div class="col-sm-12 testimonials">
+                <div class="col-sm-12 testimonials" id="OurTeam">
                     <h3>Our Team</h3>
-                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                    <div class="item active">
+                </div>
+                <div class="col-sm-3 testimonials" id="OurTeam">
                     <img src="{{ '/img/testimonials/1.jpg'|asseturl }}" alt="" class="img-responsive img-thumbnail" />
                     <h4>
                     Information Person 1
                     </h4>
-                    </div>
+                </div>
 
-                    <div class="item">
+                <div class="col-sm-3 testimonials" id="OurTeam">
                     <img src="{{ '/img/testimonials/2.jpg'|asseturl }}" alt="" class="img-responsive img-thumbnail" />
                     <h4>
                     Information Person 2
                     </h4>
-                    </div>
+                </div>
 
-                    <div class="item">
+                <div class="col-sm-3 testimonials" id="OurTeam">
                     <img src="{{ '/img/testimonials/3.jpg'|asseturl }}" alt="" class="img-responsive img-thumbnail" />
                     <h4>
                     Information Person 3
                     </h4>
-                    </div>
+                </div>
 
-                    <div class="item">
+                <div class="col-sm-3 testimonials" id="OurTeam">
                     <img src="{{ '/img/testimonials/4.jpg'|asseturl }}" alt="" class="img-responsive img-thumbnail" />
                     <h4>
                     Information Person 4
                     </h4>
-                    </div>
+                </div>
 
-                    </div>
                     </div>
                     </div>
             </div>
@@ -580,10 +511,10 @@
                 <div class="col-sm-7 form-group contact-form">
                     <h4>Send Message</h4>
                     <form method="post" action="assets/contact.php">
-                        <input type="text" name="email" placeholder="Email" class="form-control contact-email">
-                        <input type="text" name="subject" placeholder="Subject" class="form-control contact-subject">
-                        <textarea name="message" class="form-control" placeholder="Message"></textarea>
-                        <button type="submit" class="btn btn-contact">Submit</button>
+                        <input type="text" name="email" placeholder="Email" class="form-control contact-email" id="EmailUser">
+                        <input type="text" name="subject" placeholder="Subject" class="form-control contact-subject" id="Subject">
+                        <textarea name="message" class="form-control" placeholder="Message" id="Message"></textarea>
+                        <button onclick="sendMail(); return false" class="btn btn-contact">Submit</button>
                     </form>
                 </div>
                 <div class="col-sm-5 contact-address contact-about">
@@ -699,6 +630,28 @@
         <script src="{{ '/js/script.js'|asseturl }}"></script>
         <script src="{{ '/js/main.js'|asseturl }}"></script>
 
+        <script>
+        function sendMail() {
+            var link = "mailto:lestroisdandies@gmail.com"
+            + "?cc=" + escape(document.getElementById('EmailUser').value)
+            + "&subject=" + escape(document.getElementById('Subject').value)
+            + "&body=" + escape(document.getElementById('Message').value)
+            ;
+            window.location.href = link;
+        }
+        function sendMailWithFile() {
+            var link = "mailto:lestroisdandies@gmail.com"
+            + "?cc=" + escape(document.getElementById('EmailUser').value)
+            + "&subject=" + escape(document.getElementById('Subject').value)
+            + "&body=" + escape(document.getElementById('PhoneUser').value)
+            + escape(document.getElementById('MailUser').value)
+            ;
+            window.location.href = link;
+        }
+
+        </script>
+
+        <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
 
     </body>
 
