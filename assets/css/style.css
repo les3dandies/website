@@ -589,9 +589,15 @@ color: #888;
 .services-container {
 	margin: 0 auto;
     padding-bottom: 40px;
-	background: #f4f4f4;
-	color: #888;
+	/*background: #f4f4f4;*/
+  /*color: #888;*/
+  color: #ffffff;
     text-align: center;
+  background: url("../img/backgrounds/company2.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .services {
@@ -629,7 +635,8 @@ line-height: 24px;}
 }
 .services-text-right h5{
 	text-align: left;
-	color: #444;
+  /*color: #444;*/
+	color: #ffffff;
     font-size: 16px;
     font-weight: 600;
 }
