@@ -353,8 +353,8 @@ color: #888;
 }
 .navbar-default.menu-shrink{
     padding: 10px 0;
-	background-color: #fff;
-    border-bottom: 2px solid #eee;
+	background-color: #af6c4f;
+    border-bottom: 2px solid black;
     width:100%;
 }
 
@@ -390,7 +390,7 @@ color: #888;
     margin: 0 auto;
     text-align: center;
     color: #fff;
-    background: url("../img/backgrounds/1.jpg");
+    background: url("../img/backgrounds/company.jpg");
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -873,6 +873,20 @@ line-height: 24px;}
   color: #fff;
   cursor: default; }
 
+.add-to-cart-btn{
+  border: none;
+  border-radius: 2px;
+  color: black;
+  margin-top: 10%;
+  background: transparent;
+  font-size: bold;
+}
+.add-to-cart-btn:hover{
+  font-size: bold;
+  color: #ffffff;
+  background: #009ca8;
+}
+
 .cbp-l-loadMore-button .cbp-l-loadMore-link {
   /* @editable properties */
   border-radius: 0;
@@ -926,12 +940,12 @@ line-height: 24px;}
 
 .cbp-l-caption-title {
   /* @editable properties */
-  margin-top: 30%;
+  margin-top: 5%;
   font: 600 17px/25px "Open Sans", sans-serif;
   color: #fff;
   text-align: center;
   text-transform: capitalize;
-  display: block; }
+  /*display: block;*/ }
 
 .cbp-l-inline {
   margin: 20px 3px;
