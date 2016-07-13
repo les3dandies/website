@@ -391,10 +391,13 @@ color: #888;
     text-align: center;
     color: #fff;
     background: url("../img/backgrounds/company.jpg");
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	/*-webkit-background-size: 1000px;
+	-moz-background-size:1000px;
+	-o-background-size: 1000px;
+	background-size: 1300px;*/
 }
 
 .inner-bg {
@@ -411,7 +414,8 @@ color: #888;
 
 .top-content h2 {
 	font-family: 'Dosis', sans-serif;
-    color: #f3f3f3;
+    /*color: #f3f3f3;*/
+    color: #fecf5b;
     font-size: 48px;
     line-height: 54px;
 	margin: 10px 0 30px 0;
@@ -471,7 +475,8 @@ color: #888;
 }
 
 .features h3 {
-	color: #323A45;
+  color: #451f13;
+	/*color: #323A45;*/
 }
 
 .features p {
@@ -606,7 +611,8 @@ color: #888;
 }
 
 .services h3 {
-	color: #323A45;
+  color: #fecf5b;
+	/*color: #323A45;*/
 }
 
 .services p {
@@ -737,7 +743,8 @@ line-height: 24px;}
 }
 
 .pricing h3 {
-	color: #323A45;
+  /*color: #323A45;*/
+	color: #451f13;
 }
 
 .pricing p {
@@ -836,7 +843,8 @@ line-height: 24px;}
     text-align: center;
 }
 .portfolio h3 {
-	color: #323A45;
+  /*color: #323A45;*/
+	color: #451f13;
 	margin-top: 60px;
     margin-bottom: 40px;
 }
@@ -870,21 +878,22 @@ line-height: 24px;}
 
 .cbp-l-filters-button .cbp-filter-item:hover {
   /* @editable properties */
-  color: #fff;
-  background: #009ca8;
+  color: #451f13;
+  background: #fecf5b;
+  /*background: #009ca8;*/
 }
 
 .cbp-l-filters-button .cbp-filter-item.cbp-filter-item-active {
   /* @editable properties */
-  background: #009ca8;
-  color: #fff;
+  background: #fecf5b;
+  color: #451f13;
   cursor: default; }
 
 .add-to-cart-btn{
   border: none;
   border-radius: 2px;
   color: black;
-  margin-top: 10%;
+  margin-top: 5%;
   background: transparent;
   font-size: bold;
 }
@@ -947,7 +956,6 @@ line-height: 24px;}
 
 .cbp-l-caption-title {
   /* @editable properties */
-  margin-top: 5%;
   font: 600 17px/25px "Open Sans", sans-serif;
   color: #fff;
   text-align: center;
@@ -1041,7 +1049,8 @@ line-height: 24px;}
 
 .testimonials h3 {
     padding-bottom: 50px;
-	color: #323A45;
+  /*color: #323A45;*/
+	color: #451f13;
 }
 
 .testimonials h4{
@@ -1092,7 +1101,8 @@ line-height: 24px;}
 }
 
 .contact h3 {
-    color: #fff;
+    color: #fecf5b;
+    /*color: #fff;*/
 }
 
 .contact p {
@@ -1190,10 +1200,12 @@ text-align:center;
 }
 
 #footer h3 { 
-	color: #323A45;
+	/*color: #323A45;*/
+  color: #451f13;
 }
 #footer p {
-	color: #888;
+  /*color: #888;*/
+	color: #451f13;
 	width: 60%;
 	margin: 0 auto 40px;
 	margin-top: 30px;
