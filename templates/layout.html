@@ -8,6 +8,63 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Primes - Landing Page Template</title>
 
+
+        <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyB5wYzhQrw8sniQ-K8cJGpP79zD6LBKCo8",
+                authDomain: "les3dandies-e81c7.firebaseapp.com",
+                databaseURL: "https://les3dandies-e81c7.firebaseio.com",
+                storageBucket: "les3dandies-e81c7.appspot.com",
+            };
+            firebase.initializeApp(config);
+
+            var storage = firebase.storage();
+            var storageRef = firebase.storage().ref();
+            // Create the file metadata
+            var metadata = {
+                contentType: 'file'
+            };
+
+            // function readSingleFile(e) {
+            //     var file = e.target;
+            //     if (!file) {
+            //         return;
+            //     }
+            //     var reader = new FileReader();
+            //     reader.onload = function(e) {
+            //         var contents = e.target.result;
+            //     };
+            //     reader.readAsText(file);
+            // }
+
+
+
+            window.onload = function (idInputFile) {
+                document.getElementById(idInputFile);
+            };
+
+            function sendUploadFile() {
+                var element = document.getElementById("Upload3DFile");
+                console.log(element.files);
+                var file = element.files[0];
+                console.log(file)
+                var reader = new FileReader();
+                //reader.readAsText(file);
+                reader.onload = function(data){
+                    console.log(data)
+                }
+                reader.readAsBinaryString(file);
+                var uploadTask = storageRef.child('file/'+file.name).put(file, metadata);
+            }
+
+            
+
+
+        </script> 
+
+
         <!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800">
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700">
@@ -61,7 +118,7 @@
                         <li><a href="{{ '#OurCollection' }}">Our collection</a></li>
                         <li><a href="{{ '#YourCreation' }}">Your creation</a></li>
 
-                        <li><a href="{{ '#OurTeam' }}">OurTeam</a></li>
+                        <li><a href="{{ '#OurTeam' }}">Our Team</a></li>
                         <li><a href="{{ '#ContactUs' }}">Contact us</a></li>
                         <!-- <li><a href="{{ '#pricing-section' }}">Sign up</a></li> -->
                     </ul>
@@ -413,12 +470,7 @@
 						<ul>
 							<li>
                             <div class="input-group">
-                                <label class="input-group-btn">
-                                    <span class="btn" id="BrowseButton">
-                                        Browse&hellip; <input type="file" style="display: none;" multiple id="3DfileUser">
-                                    </span>
-                                </label>
-                                <input type="text" class="form-control" readonly>
+                                <input type="file" name="files[]" multiple class="Browser" id="Upload3DFile">
                             </div>
                             </li>
 							<li>Let us your phone or email and comments</li>
@@ -430,7 +482,7 @@
                             <!-- <textarea name='comment' id='comment' placeholder="Let some comments here."></textarea><br /> -->
                             <div contenteditable="true" id='CommentUser'>Let some comments here.</div>
                             </li>
-						<li><button onclick="sendMailWithFile(); return false" class="btn btn-top btn-lg">Validate</button></li>
+						<li><button onclick="sendUploadFile(); return false" class="btn btn-top btn-lg">Validate</button></li>
 						</ul>
 					</div>
 				</div>
@@ -617,7 +669,7 @@
       </ul>
     </div>
   </div>  <!-- END OF STYLE SWITCHER -->
- 
+
         <!-- Javascript -->
         <script src="{{ '/js/jquery-1.10.2.min.js'|asseturl }}"></script>
         <script src="{{ '/bootstrap/js/bootstrap.min.js'|asseturl }}"></script>
