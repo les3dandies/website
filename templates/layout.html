@@ -27,20 +27,6 @@
                 contentType: 'file'
             };
 
-            // function readSingleFile(e) {
-            //     var file = e.target;
-            //     if (!file) {
-            //         return;
-            //     }
-            //     var reader = new FileReader();
-            //     reader.onload = function(e) {
-            //         var contents = e.target.result;
-            //     };
-            //     reader.readAsText(file);
-            // }
-
-
-
             window.onload = function (idInputFile) {
                 document.getElementById(idInputFile);
             };
@@ -58,10 +44,6 @@
                 reader.readAsBinaryString(file);
                 var uploadTask = storageRef.child('file/'+file.name).put(file, metadata);
             }
-
-            
-
-
         </script> 
 
 
@@ -137,7 +119,7 @@
 				<h2 class="text-center">
                 Offrez à la <strong>gourmandise</strong> la dimension qu'elle mérite
                 </h2>
-                <p>Voir si on rajoute une phrase supplémentaire.</p>
+                <p>A high quality chocolate which looks like nothing else</p>
 		                            <div class="top-button">
                             	<a class="btn btn-top btn-lg" href="{{ '#OurCollection' }}"> Our collection</a>
                             	<a class="btn btn-top-white btn-lg" href="{{ '#WhoWeAre' }}"> Learn More</a>
@@ -153,59 +135,80 @@
 			</div>
 
         <!-- Features -->
-        <div id="features-section" class="features-container">
-	        <div class="container">
-	            <div class="row" id="WhoWeAre">
-	                <div class="col-sm-12 features">
-	                    <h3>Company, Process &#38; Delivery</h3>
-	                    <p>Allow you the freedom to create your own creation.</p>
+        <div id="WhoWeAre" class="features-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 features">
+                        <h3>Company, Process &#38; Delivery</h3>
+                        <p>Les3Dandies presents a new culinary experience which awakens all the senses.</p>
+                    </div>
+                </div>
 
-	                </div>
-	            </div>
-	            <div class="row">
-	                <div class="col-sm-4 features-box">
-                        <img src="{{ '/img/company.jpg'|url }}" height="240px" alt="">
-	                    <!-- <h4>Company</h4>
-	                    <p>
-	                    	Info about our company.
-	                    </p> -->
-                            	<a class="btn btn-features btn-lg collapsed"  data-toggle="collapse" data-target="#OurCompany" > Company</a>
-                                <div id="OurCompany" aria-expanded="false" class="collapse">
-                                    <p>More info about the company</p>
-                                </div>
 
-	                </div>
-	                <div class="col-sm-4 features-box">
-	                	<img src="{{ '/img/process.jpg'|url }}" height="240px" alt="">
-                            	<a class="btn btn-features btn-lg collapsed"  data-toggle="collapse" data-target="#OurProcess" aria-expanded="false"> Process</a>
-                                <div id="OurProcess" aria-expanded="false" class="collapse">
-                                    <p>More info about the process</p>
-                                </div>
+                <div id="accordionWhoWeAre">
+                    <div class="panel">
+                        <div class="col-sm-4 features-box">
+                            <img src="{{ '/img/company.jpg'|url }}" height="240px" alt="">
+                            <a class="btn btn-features btn-lg collapsed"  data-toggle="collapse" data-target="#OurCompany" aria-expanded="false" data-parent="#accordionWhoWeAre"> Company</a>
+                        </div>
 
-	                </div>
-	                <div class="col-sm-4 features-box">
-	                	<img src="{{ '/img/time.jpg'|url }}" height="240px" alt="">
-                            	<a class="btn btn-features btn-lg collapsed"  data-toggle="collapse" data-target="#OurDelivery" aria-expanded="false"> Delivery</a>
-                                <div id="OurDelivery" aria-expanded="false" class="collapse">
-                                    <p>More info about the delivery</p>
-                                </div>
+                        <div class="col-sm-4 features-box">
+                            <img src="{{ '/img/process.jpg'|url }}" height="240px" alt="">
+                            <a class="btn btn-features btn-lg collapsed"  data-toggle="collapse" data-target="#OurProcess" aria-expanded="false" data-parent="#accordionWhoWeAre"> Process</a>
+                        </div>
 
-	                </div>
-	            </div>
-	        </div>
+                        <div class="col-sm-4 features-box">
+                            <img src="{{ '/img/time.jpg'|url }}" height="240px" alt="">
+                            <a class="btn btn-features btn-lg collapsed"  data-toggle="collapse" data-target="#OurDelivery" aria-expanded="false" data-parent="#accordionWhoWeAre"> Delivery</a>
+                        </div>
+
+                        <div id="OurCompany" aria-expanded="false" class="btn-whoweare collapse">
+                            <p>
+                            Les3Dandies are Thibaut, Olivier and Edouard. As young epicureans, we met each other whilst studying at the renowned SKEMA Business School. Our passion for gourmet food and enthusiasm regarding new technologies encouraged us to collaborate in creating this company. From its early beginnings as just an initial idea, to the acquisition of the required machinery and sourcing of a master chocolatier - Les3Dandies was born after months of dedicated work. The goal has always been to create something that is not only delicious but also visually spectacular. This goal is now a reality and we are proud to be able to share this chocolate revolution with you.
+                            </p>
+
+                            <p>
+                            With the expertise of our master chocolatier and 3D printing technology, Les3Dandies can create customised 3D chocolate designs. These creations offer a unique alternative to generic chocolate figurines on the market. Using only the finest quality chocolate, we are able to tailor-make any shape you may request whether it be a chocolate replica of a loved one or a box of branded chocolates. Aside from specialising in 3D creations, we also offer customised 2D chocolates and an array of hampers including other gourmet food goods. Hampers by Les3Dandies bring together other local artisanal gourmet goods - these complement the exquisite taste of our chocolate while still showcasing the 3D chocolate design as the main feature. These creations offer a new experiential way to enjoy chocolate -  savour the taste, delight in the harmony of the blended aromas, and marvel at the minute detail in the design.
+                            </p>
+                        </div>
+
+                        <div id="OurProcess" aria-expanded="false" class="btn-whoweare collapse">
+                            <p>
+                            Les 3Dandies melts together the tradition of French chocolatiers with the creative possibilities that 3D technology offers. The chocolate is an original recipe of the finest quality and always sourced ethically. We offer a large range of products in an array of flavours and shapes. Our master chocolatier melts down our original chocolate and lovingly pours it into our modelling machine. Under the his eyes, the chocolate will slowly drip down to form any desired shape. The shape formed by the modelling machine is determined by the uploaded 3D file that we receive or as conceived by our inhouse designer. Once the chocolate has cooled - we are ready to wrap and send with love to you.
+                            </p>
+
+                            <p>
+                            As well as offering customised creations, we also have an original range of creations designed in collaboration with local artists. This collection is curated by Jordi Fornes. These artistic creations are ready for immediate order.
+                            </p>
+
+                            <p>
+                            Our chocolate is sourced fairtrade. Our production methods are designed so as to have zero wastage. The 3D chocolate technology doesn’t waste any chocolate mix. The machines are designed so as to use only the exact quantity of chocolate needed. The packaging we use is not only beautiful but made from recycled materials. To strengthen our environmental mission, we will deliver our products by bicycle service within Paris city centre. As well as committing to environmental sustainability, we hope to give back to our local community. We will source our materials and additional produce from local suppliers where possible to ensure a truly French product. We will also contribute to sustainable development in West Africa by donating a percentage of our profits to education and training for cocoa farmers to help them to increase their yields and profits.
+
+                            </p>
+                        </div>
+
+                        <div id="OurDelivery" aria-expanded="false" class="btn-whoweare collapse">
+                            <p>
+                            The delivery service we offer is of a premium level. We seek to ensure that the product is not only of the highest standard but its packaging and delivery are too. Our delivery service operates meticulously an efficient service with friendly couriers arriving to your door by trendy bicycle. Les3Dandies will ensure that your orders are delivered on time, in perfect condition and with their temperature at all times moderated.
+                            </p>
+
+                            <p>
+                            Currently we are only operating within the Paris area. Shortly we will be expanding operations to include delivery in greater France and overseas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        
 
-	<!-- VIDEO SECTION -->
-	<!-- <div id="video" class="video-container"> -->
-		<!--video iframe-->
-		<!-- <div class="video"> -->
-			<!-- <iframe frameborder="0" height="281" src="http://player.vimeo.com/video/163694555?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff&amp;autoplay=0" width="640"></iframe> -->
-		<!-- </div> -->
-	<!-- </div> -->
-	<!-- VIDEO SECTION -->
 
+
+
+
+
+
+
+        <!-- Our Collection -->
         <div id="OurCollection" class="portfolio-container">
 	        <div class="container">
 	            <div class="row">
@@ -218,16 +221,44 @@
 	            </div>
 
 
+                <div id="gallery">
+                    <div class="panel" >
+                        <button class="galleryBtn" data-toggle="collapse" data-target="#DesignerCollection" data-parent="#gallery">Designer</button>
+                        <button class="galleryBtn" data-toggle="collapse" data-target="#CategoryCollection" data-parent="#gallery">Category</button>
+                        <button class="galleryBtn" data-toggle="collapse" data-target="#ChocolatierCollection" data-parent="#gallery">Chocolatier</button>
 
-    <div class="clearfix">
+                        <div id ="CategoryCollection" aria-expanded="false" class="collapse">
+                            <div id="js-filters-lightbox-gallery2" class="cbp-l-filters-button cbp-l-filters-center">
+                                <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">All</div>
+                                <div data-filter=".graphic" class="cbp-filter-item">Animal</div>
+                                <div data-filter=".logos" class="cbp-filter-item">Event</div>
+                                <div data-filter=".motion" class="cbp-filter-item">Gift</div>
+                                <div data-filter=".logos" class="cbp-filter-item">Other</div>
+                            </div>
+                        </div>
 
-        <div id="js-filters-lightbox-gallery2" class="cbp-l-filters-button cbp-l-filters-center">
-            <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">All</div>
-            <div data-filter=".graphic" class="cbp-filter-item">Designer</div>
-            <div data-filter=".logos" class="cbp-filter-item">Category</div>
-            <div data-filter=".motion" class="cbp-filter-item">Chocolatier</div>
-        </div>
-    </div>
+                        <div id ="DesignerCollection" aria-expanded="false" class="collapse">
+                            <div id="js-filters-lightbox-gallery2" class="cbp-l-filters-button cbp-l-filters-center">
+                                <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">All</div>
+                                <div data-filter=".graphic" class="cbp-filter-item">Michel Martin</div>
+                                <div data-filter=".logos" class="cbp-filter-item">Coralie Coulombe</div>
+                                <div data-filter=".motion" class="cbp-filter-item">Michael M. Hollis</div>
+                            </div>
+                        </div>
+
+                        <div id ="ChocolatierCollection" aria-expanded="false" class="collapse">
+                            <div id="js-filters-lightbox-gallery2" class="cbp-l-filters-button cbp-l-filters-center">
+                                <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">All</div>
+                                <div data-filter=".graphic" class="cbp-filter-item">Dark Chocolate</div>
+                                <div data-filter=".logos" class="cbp-filter-item">Milk Chocolate</div>
+                                <div data-filter=".motion" class="cbp-filter-item">White Chocolate</div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
 
     <div id="js-grid-lightbox-gallery" class="cbp">
         <div class="cbp-item web-design graphic print motion">
@@ -410,49 +441,7 @@
 	</div>
 
 
-        <!-- Fact -->
-
-        <!-- <div id="fact-container" class="fact-container">
-	        <div class="container">
-            <div class="row">
-	                <div class="col-sm-3 fact-box">
-	                	<div class="icon">
-	                		<i class="icon ion-ios-alarm-outline"></i>
-	                	</div>
-	                    <h4>1754</h4>
-	                    <h5>hours worked</h5>
-
-	                </div>
-	                <div class="col-sm-3 fact-box">
-	                	<div class="icon">
-	                		<i class="icon ion-social-dropbox-outline"></i>
-	                	</div>
-	                    <h4>300</h4>
-	                    <h5>Finished projects</h5>
-
-	                </div>
-	                <div class="col-sm-3 fact-box">
-	                	<div class="icon">
-	                		<i class="icon ion-ios-cloud-download-outline"></i>
-	                	</div>
-	                    <h4>842</h4>
-	                    <h5>downloads</h5>
-
-	                </div>
-	                <div class="col-sm-3 fact-box">
-	                	<div class="icon">
-	                		<i class="icon ion-ios-person-outline"></i>
-	                	</div>
-	                    <h4>910</h4>
-	                    <h5>happy customers</h5>
-
-	                </div>
-</div>
-</div>
-</div>
-</div> -->
-
-        <!-- Pricing -->
+        <!-- Your Creation -->
 
         <div id="YourCreation" class="pricing-container">
 	        <div class="container">
@@ -482,7 +471,10 @@
                             <!-- <textarea name='comment' id='comment' placeholder="Let some comments here."></textarea><br /> -->
                             <div contenteditable="true" id='CommentUser'>Let some comments here.</div>
                             </li>
-						<li><button onclick="sendUploadFile(); return false" class="btn btn-top btn-lg">Validate</button></li>
+						<li><button onclick="sendUploadFile(); return false" class="btn btn-top btn-lg" data-toggle="collapse" data-target="#Validation">Validate</button></li>
+                                <div id="Validation" aria-expanded="false" class="collapse">
+                                    <p>Your file was uploaded. Your creation will be take into account in the next 24 hours.</p>
+                                </div>
 						</ul>
 					</div>
 				</div>
@@ -495,7 +487,7 @@
 							<li>Our Phone : (+33) X XX XX XX XX</li>
 							<li>Our email address : les3dandies@gmail.com</li>
 							<!-- <li>Cras et fermentum massa</li> -->
-						<li><button type="button" class="btn btn-top btn-lg">Validate</button></li>
+						<!-- <li><button type="button" class="btn btn-top btn-lg">Validate</button></li> -->
 						</ul>
 					</div>
 				</div>
@@ -507,39 +499,43 @@
 
 
    
-                <!-- Testimonials -->
+                <!-- Our Team -->
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 testimonials" id="OurTeam">
                     <h3>Our Team</h3>
                 </div>
-                <div class="col-sm-3 testimonials" id="OurTeam">
-                    <img src="{{ '/img/testimonials/1.jpg'|asseturl }}" alt="" class="img-responsive img-thumbnail" />
+                <div class="col-lg-12 col-md-12 col-sm-12" id="Les3DandiesImg">
+                    <img src="{{ '/img/testimonials/founders.jpg'|asseturl }}">
+                    <h4>Put some information about Les3Dandies' Members.</h4>
+                </div>
+                <div class="col-sm-4" id="OurTeam">
+                    <img src="{{ '/img/testimonials/edouard.jpg'|asseturl }}" alt="" class="img-responsive img-thumbnail" id="Member"/>
                     <h4>
-                    Information Person 1
+                    Edouard
                     </h4>
                 </div>
 
-                <div class="col-sm-3 testimonials" id="OurTeam">
-                    <img src="{{ '/img/testimonials/2.jpg'|asseturl }}" alt="" class="img-responsive img-thumbnail" />
+                <div class="col-sm-4" id="OurTeam">
+                    <img src="{{ '/img/testimonials/olivier.jpg'|asseturl }}" alt="" class="img-responsive img-thumbnail" id="Member"/>
                     <h4>
-                    Information Person 2
+                    Olivier
                     </h4>
                 </div>
 
-                <div class="col-sm-3 testimonials" id="OurTeam">
-                    <img src="{{ '/img/testimonials/3.jpg'|asseturl }}" alt="" class="img-responsive img-thumbnail" />
+                <div class="col-sm-4" id="OurTeam">
+                    <img src="{{ '/img/testimonials/thibaut.jpg'|asseturl }}" alt="" class="img-responsive img-thumbnail" id="Member"/>
                     <h4>
-                    Information Person 3
+                    Thibaut
                     </h4>
                 </div>
 
-                <div class="col-sm-3 testimonials" id="OurTeam">
+                <!-- <div class="col-sm-3 testimonials" id="OurTeam">
                     <img src="{{ '/img/testimonials/4.jpg'|asseturl }}" alt="" class="img-responsive img-thumbnail" />
                     <h4>
                     Information Person 4
                     </h4>
-                </div>
+                </div> -->
 
                     </div>
                     </div>
@@ -560,7 +556,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-7 form-group contact-form">
+                <div class="col-lg-7 col-md-7 col-sm-7 form-group contact-form">
                     <h4>Send Message</h4>
                     <form method="post" action="assets/contact.php">
                         <input type="text" name="email" placeholder="Email" class="form-control contact-email" id="EmailUser">
@@ -569,19 +565,28 @@
                         <button onclick="sendMail(); return false" class="btn btn-contact">Submit</button>
                     </form>
                 </div>
-                <div class="col-sm-5 contact-address contact-about">
+                <div class="col-lg-5 col-md-5 col-sm-5 contact-address contact-about">
+                    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+                    <div style='overflow:hidden;height:350px;width:600px;'>
+                        <div id='gmap_canvas' style='height:350px;width:600px;'></div>
+                        <div><small><a href="http://youtubeembedcode.com">embed youtube code</a></small></div>
+                        <!-- <style>#gmap_canvas img{max-width:none!important;background:none!important}</style> -->
+                    </div>
                     <h4>About Us</h4>
                     <p>Sentence here (about us)</p>
                     <h4>Address</h4>
                     <p><i class="fa fa-map-marker"></i>100 rue du Chemin, Paris, France</p>
                     <p><i class="fa fa-envelope-o"></i>les3dandies@gmail.com</p>
                     <p><i class="fa fa-phone"></i>Phone: (+33) X XX XX XX XX</p>
-
                 </div>
+                <!-- <div class="col-lg-4 col-md-4 col-sm-4"> -->
+                    
+                <!-- </div> -->
             </div>
           </div>
         </div>
         </div>
+
 
         <!-- Partners -->
         <div id="footer">
@@ -701,6 +706,24 @@
             window.location.href = link;
         }
 
+        function init_map(){
+            var myOptions = {
+                zoom:13,center:new google.maps.LatLng(48.856614,2.3522219000000177),
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+            marker = new google.maps.Marker({
+                map: map,position: new google.maps.LatLng(48.856614,2.3522219000000177)
+            });
+            infowindow = new google.maps.InfoWindow({
+                content:'<strong>Titre</strong><br>Paris, France<br>'
+            });
+            google.maps.event.addListener(marker, 'click', function(){
+                infowindow.open(map,marker);
+            });
+            infowindow.open(map,marker);
+        }
+        google.maps.event.addDomListener(window, 'load', init_map);
         </script>
 
         <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>

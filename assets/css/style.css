@@ -470,6 +470,10 @@ color: #888;
 
 
 /***** Features *****/
+.btn-whoweare{
+  text-align: justify;
+  font-size: 20px;
+}
 
 .features-container {
     margin: 0 auto;
@@ -865,6 +869,21 @@ line-height: 24px;}
     line-height: 24px;
 }
 
+.galleryBtn{
+  background: none;
+  border: none;
+  color: #000;
+  font-size: 1.7em;
+  margin: 30px;
+  padding: 20px;
+}
+.galleryBtn:hover{
+  background: #fecf5b;
+}
+.galleryBtn:active{
+  background: #fecf5b;
+}
+
 .cbp-l-filters-button .cbp-filter-item {
   /* @editable properties */
   background-color: #FFFFFF;
@@ -1049,6 +1068,22 @@ line-height: 24px;}
 }
 
 /***** Testimonials *****/
+
+#Les3DandiesImg{
+  text-align: center;
+  width: 75%;
+  height: 75%;
+  margin-right: 150px;
+  margin-left: 150px;
+  /*margin-right: auto;
+  margin-left: auto;*/
+}
+
+#Member{
+  height: 250px;
+  width: 225px;
+  border-radius: 30px;
+}
 
 .testimonials {
     margin-top: 60px;
@@ -1521,4 +1556,11 @@ color: #0dc0c0;
 	}
 	
 
+}
+
+
+/* Google Map */
+#gmap_canvas img{
+  max-width:none!important;
+  background:none!important;
 }
