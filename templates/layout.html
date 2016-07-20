@@ -1,734 +1,674 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Primes - Landing Page Template</title>
 
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Primes - Landing Page Template</title>
+		<script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
+		<script>
+			// Initialize Firebase
+			var config = {
+				apiKey: "AIzaSyB5wYzhQrw8sniQ-K8cJGpP79zD6LBKCo8",
+				authDomain: "les3dandies-e81c7.firebaseapp.com",
+				databaseURL: "https://les3dandies-e81c7.firebaseio.com",
+				storageBucket: "les3dandies-e81c7.appspot.com",
+			};
+			firebase.initializeApp(config);
 
+			var storage = firebase.storage();
+			var storageRef = firebase.storage().ref();
+			// Create the file metadata
+			var metadata = {
+				contentType: 'file'
+			};
 
-        <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
-        <script>
-            // Initialize Firebase
-            var config = {
-                apiKey: "AIzaSyB5wYzhQrw8sniQ-K8cJGpP79zD6LBKCo8",
-                authDomain: "les3dandies-e81c7.firebaseapp.com",
-                databaseURL: "https://les3dandies-e81c7.firebaseio.com",
-                storageBucket: "les3dandies-e81c7.appspot.com",
-            };
-            firebase.initializeApp(config);
+			window.onload = function (idInputFile) {
+				document.getElementById(idInputFile);
+			};
 
-            var storage = firebase.storage();
-            var storageRef = firebase.storage().ref();
-            // Create the file metadata
-            var metadata = {
-                contentType: 'file'
-            };
+			function sendUploadFile() {
+				var element = document.getElementById("Upload3DFile");
+				console.log(element.files);
+				var file = element.files[0];
+				console.log(file)
+				var reader = new FileReader();
+				//reader.readAsText(file);
+				reader.onload = function(data){
+					console.log(data)
+				}
+				reader.readAsBinaryString(file);
+				var uploadTask = storageRef.child('file/'+file.name).put(file, metadata);
+			}
+		</script> 
 
-            window.onload = function (idInputFile) {
-                document.getElementById(idInputFile);
-            };
+		<!-- CSS -->
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800">
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700">
+		<link rel="stylesheet" href="{{ '/bootstrap/css/bootstrap.min.css'|asseturl }}">
+		<link rel="stylesheet" href="{{ '/font-awesome/css/font-awesome.min.css'|asseturl }}">
+		<link rel="stylesheet" href="{{ '/elegant-icons/css/elegant-icons.min.css'|asseturl }}">
+		<link rel="stylesheet" href="{{ '/ionicons/css/ionicons.min.css'|asseturl }}">
+		<link rel="stylesheet" href="{{ '/owl-carousel/owl.carousel.css'|asseturl }}">
+		<link rel="stylesheet" href="{{ '/owl-carousel/owl.theme.css'|asseturl }}">
+		<link rel="stylesheet" href="{{ '/cubeportfolio/css/cubeportfolio.min.css'|asseturl }}">
+		<link rel="stylesheet" href="{{ '/css/style.css'|asseturl }}">
+		<link rel="stylesheet" href="{{ 'assets/css/switcher.css'|asseturl }}">
+		<link rel="stylesheet" href="{{ 'assets/css/style1.css'|asseturl }}" id="colors">
+	</head>
 
-            function sendUploadFile() {
-                var element = document.getElementById("Upload3DFile");
-                console.log(element.files);
-                var file = element.files[0];
-                console.log(file)
-                var reader = new FileReader();
-                //reader.readAsText(file);
-                reader.onload = function(data){
-                    console.log(data)
-                }
-                reader.readAsBinaryString(file);
-                var uploadTask = storageRef.child('file/'+file.name).put(file, metadata);
-            }
-        </script> 
-
-
-        <!-- CSS -->
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800">
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700">
-        <link rel="stylesheet" href="{{ '/bootstrap/css/bootstrap.min.css'|asseturl }}">
-        <link rel="stylesheet" href="{{ '/font-awesome/css/font-awesome.min.css'|asseturl }}">
-        <link rel="stylesheet" href="{{ '/elegant-icons/css/elegant-icons.min.css'|asseturl }}">
-        <link rel="stylesheet" href="{{ '/ionicons/css/ionicons.min.css'|asseturl }}">
-        <link rel="stylesheet" href="{{ '/owl-carousel/owl.carousel.css'|asseturl }}">
-        <link rel="stylesheet" href="{{ '/owl-carousel/owl.theme.css'|asseturl }}">
-        <link rel="stylesheet" href="{{ '/cubeportfolio/css/cubeportfolio.min.css'|asseturl }}">
-        <link rel="stylesheet" href="{{ '/css/style.css'|asseturl }}">
-
-            <!--Colors-->
-            <!-- <link rel="stylesheet" type="text/css" href="{{ 'assets/css/colors/red.css'|asseturl }}"> -->
-            <!-- <link rel="stylesheet" type="text/css" href="{{ 'assets/css/colors/orange.css'|asseturl }}"> -->
-            <!-- <link rel="stylesheet" type="text/css" href="{{ 'assets/css/colors/green.css'|asseturl }}"> -->
-            <!-- <link rel="stylesheet" type="text/css" href="{{ 'assets/css/colors/lime.css'|asseturl }}"> -->
-            <!-- <link rel="stylesheet" type="text/css" href="{{ 'assets/css/colors/brown.css'|asseturl }}"> -->
-            <!-- <link rel="stylesheet" type="text/css" href="{{ 'assets/css/colors/blue.css'|asseturl }}"> -->
-            <!-- <link rel="stylesheet" type="text/css" href="{{ 'assets/css/colors/yellow.css'|asseturl }}"> -->
-             <!-- <link rel="stylesheet" type="text/css" href="{{ 'assets/css/colors/purple.css'|asseturl }}"> -->
-
-<!-- CSS FOR DEMO - NOT INCLUDED IN MAIN FILES -->
-        <link rel="stylesheet" href="{{ 'assets/css/switcher.css'|asseturl }}">
-<link rel="stylesheet" href="{{ 'assets/css/style1.css'|asseturl }}" id="colors"> 
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-
-    </head>
-
-    <body data-spy="scroll" data-offset="80">
-         <div class="navbar navbar-default navbar-fixed-top menu-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="{{ '#home'|asseturl }}"><i class="fa fa-star-half-o"></i> Les3Dandies</a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="{{ '#WhoWeAre' }}">Who we are</a></li>
-                        <li><a href="{{ '#OurCollection' }}">Our collection</a></li>
-                        <li><a href="{{ '#YourCreation' }}">Your creation</a></li>
-
-                        <li><a href="{{ '#OurTeam' }}">Our Team</a></li>
-                        <li><a href="{{ '#ContactUs' }}">Contact us</a></li>
-                        <!-- <li><a href="{{ '#pricing-section' }}">Sign up</a></li> -->
-                    </ul>
-                </div> 
-            </div>
-        </div> 
-
-        <!-- Top content -->
-        <div id="home" class="parallax top-content" data-stellar-background-ratio="0.3">
-            <div class="inner-bg">
-                <div class="container">
-                    <div class="row">
-
-			<div class="col-md-10 col-md-offset-1 top-description">
-				
-				<h2 class="text-center">
-                Offrez à la <strong>gourmandise</strong> la dimension qu'elle mérite
-                </h2>
-                <p>A high quality chocolate which looks like nothing else</p>
-		                            <div class="top-button">
-                            	<a class="btn btn-top btn-lg" href="{{ '#OurCollection' }}"> Our collection</a>
-                            	<a class="btn btn-top-white btn-lg" href="{{ '#WhoWeAre' }}"> Learn More</a>
-                            </div>
-	
-					</div>
-                            </div>
-	
-					</div>
-
-			
+	<body data-spy="scroll" data-offset="80">
+		<div class="navbar navbar-default navbar-fixed-top menu-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="{{ '#home'|asseturl }}"><i class="fa fa-star-half-o"></i> Les3Dandies</a>
 				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="{{ '#WhoWeAre' }}">Who we are</a></li>
+						<li><a href="{{ '#OurCollection' }}">Our collection</a></li>
+						<li><a href="{{ '#YourCreation' }}">Your creation</a></li>
+						<li><a href="{{ '#OurTeam' }}">Our Team</a></li>
+						<li><a href="{{ '#ContactUs' }}">Contact us</a></li>
+					</ul>
+				</div> 
 			</div>
+		</div> 
 
-        <!-- Features -->
-        <div id="WhoWeAre" class="features-container">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 features">
-                        <h3>Company, Process &#38; Delivery</h3>
-                        <p>Les3Dandies presents a new culinary experience which awakens all the senses.</p>
-                    </div>
-                </div>
-
-
-                <div id="accordionWhoWeAre">
-                    <div class="panel">
-                        <div class="col-sm-4 features-box">
-                            <img src="{{ '/img/company.jpg'|url }}" height="240px" alt="">
-                            <a class="btn btn-features btn-lg collapsed"  data-toggle="collapse" data-target="#OurCompany" aria-expanded="false" data-parent="#accordionWhoWeAre"> Company</a>
-                        </div>
-
-                        <div class="col-sm-4 features-box">
-                            <img src="{{ '/img/process.jpg'|url }}" height="240px" alt="">
-                            <a class="btn btn-features btn-lg collapsed"  data-toggle="collapse" data-target="#OurProcess" aria-expanded="false" data-parent="#accordionWhoWeAre"> Process</a>
-                        </div>
-
-                        <div class="col-sm-4 features-box">
-                            <img src="{{ '/img/time.jpg'|url }}" height="240px" alt="">
-                            <a class="btn btn-features btn-lg collapsed"  data-toggle="collapse" data-target="#OurDelivery" aria-expanded="false" data-parent="#accordionWhoWeAre"> Delivery</a>
-                        </div>
-
-                        <div id="OurCompany" aria-expanded="false" class="btn-whoweare collapse">
-                            <p>
-                            Les3Dandies are Thibaut, Olivier and Edouard. As young epicureans, we met each other whilst studying at the renowned SKEMA Business School. Our passion for gourmet food and enthusiasm regarding new technologies encouraged us to collaborate in creating this company. From its early beginnings as just an initial idea, to the acquisition of the required machinery and sourcing of a master chocolatier - Les3Dandies was born after months of dedicated work. The goal has always been to create something that is not only delicious but also visually spectacular. This goal is now a reality and we are proud to be able to share this chocolate revolution with you.
-                            </p>
-
-                            <p>
-                            With the expertise of our master chocolatier and 3D printing technology, Les3Dandies can create customised 3D chocolate designs. These creations offer a unique alternative to generic chocolate figurines on the market. Using only the finest quality chocolate, we are able to tailor-make any shape you may request whether it be a chocolate replica of a loved one or a box of branded chocolates. Aside from specialising in 3D creations, we also offer customised 2D chocolates and an array of hampers including other gourmet food goods. Hampers by Les3Dandies bring together other local artisanal gourmet goods - these complement the exquisite taste of our chocolate while still showcasing the 3D chocolate design as the main feature. These creations offer a new experiential way to enjoy chocolate -  savour the taste, delight in the harmony of the blended aromas, and marvel at the minute detail in the design.
-                            </p>
-                        </div>
-
-                        <div id="OurProcess" aria-expanded="false" class="btn-whoweare collapse">
-                            <p>
-                            Les 3Dandies melts together the tradition of French chocolatiers with the creative possibilities that 3D technology offers. The chocolate is an original recipe of the finest quality and always sourced ethically. We offer a large range of products in an array of flavours and shapes. Our master chocolatier melts down our original chocolate and lovingly pours it into our modelling machine. Under the his eyes, the chocolate will slowly drip down to form any desired shape. The shape formed by the modelling machine is determined by the uploaded 3D file that we receive or as conceived by our inhouse designer. Once the chocolate has cooled - we are ready to wrap and send with love to you.
-                            </p>
-
-                            <p>
-                            As well as offering customised creations, we also have an original range of creations designed in collaboration with local artists. This collection is curated by Jordi Fornes. These artistic creations are ready for immediate order.
-                            </p>
-
-                            <p>
-                            Our chocolate is sourced fairtrade. Our production methods are designed so as to have zero wastage. The 3D chocolate technology doesn’t waste any chocolate mix. The machines are designed so as to use only the exact quantity of chocolate needed. The packaging we use is not only beautiful but made from recycled materials. To strengthen our environmental mission, we will deliver our products by bicycle service within Paris city centre. As well as committing to environmental sustainability, we hope to give back to our local community. We will source our materials and additional produce from local suppliers where possible to ensure a truly French product. We will also contribute to sustainable development in West Africa by donating a percentage of our profits to education and training for cocoa farmers to help them to increase their yields and profits.
-
-                            </p>
-                        </div>
-
-                        <div id="OurDelivery" aria-expanded="false" class="btn-whoweare collapse">
-                            <p>
-                            The delivery service we offer is of a premium level. We seek to ensure that the product is not only of the highest standard but its packaging and delivery are too. Our delivery service operates meticulously an efficient service with friendly couriers arriving to your door by trendy bicycle. Les3Dandies will ensure that your orders are delivered on time, in perfect condition and with their temperature at all times moderated.
-                            </p>
-
-                            <p>
-                            Currently we are only operating within the Paris area. Shortly we will be expanding operations to include delivery in greater France and overseas.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-
-
-
-
-
-        <!-- Our Collection -->
-        <div id="OurCollection" class="portfolio-container">
-	        <div class="container">
-	            <div class="row">
-	                <div class="col-sm-12 portfolio" id="OurCollection">
-
-	                    <h3>Our collection</h3>
-	                    <p>Find your original chocolate in our collection.</p>
-
-	            </div>
-	            </div>
-
-
-                <div id="gallery">
-                    <div class="panel" >
-                        <button class="galleryBtn" data-toggle="collapse" data-target="#DesignerCollection" data-parent="#gallery">Designer</button>
-                        <button class="galleryBtn" data-toggle="collapse" data-target="#CategoryCollection" data-parent="#gallery">Category</button>
-                        <button class="galleryBtn" data-toggle="collapse" data-target="#ChocolatierCollection" data-parent="#gallery">Chocolatier</button>
-
-                        <div id ="CategoryCollection" aria-expanded="false" class="collapse">
-                            <div id="js-filters-lightbox-gallery2" class="cbp-l-filters-button cbp-l-filters-center">
-                                <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">All</div>
-                                <div data-filter=".graphic" class="cbp-filter-item">Animal</div>
-                                <div data-filter=".logos" class="cbp-filter-item">Event</div>
-                                <div data-filter=".motion" class="cbp-filter-item">Gift</div>
-                                <div data-filter=".logos" class="cbp-filter-item">Other</div>
-                            </div>
-                        </div>
-
-                        <div id ="DesignerCollection" aria-expanded="false" class="collapse">
-                            <div id="js-filters-lightbox-gallery2" class="cbp-l-filters-button cbp-l-filters-center">
-                                <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">All</div>
-                                <div data-filter=".graphic" class="cbp-filter-item">Michel Martin</div>
-                                <div data-filter=".logos" class="cbp-filter-item">Coralie Coulombe</div>
-                                <div data-filter=".motion" class="cbp-filter-item">Michael M. Hollis</div>
-                            </div>
-                        </div>
-
-                        <div id ="ChocolatierCollection" aria-expanded="false" class="collapse">
-                            <div id="js-filters-lightbox-gallery2" class="cbp-l-filters-button cbp-l-filters-center">
-                                <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">All</div>
-                                <div data-filter=".graphic" class="cbp-filter-item">Dark Chocolate</div>
-                                <div data-filter=".logos" class="cbp-filter-item">Milk Chocolate</div>
-                                <div data-filter=".motion" class="cbp-filter-item">White Chocolate</div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-
-
-    <div id="js-grid-lightbox-gallery" class="cbp">
-        <div class="cbp-item web-design graphic print motion">
-            <a href="{{ 'ajax-lightbox-gallery/project1.html'|asseturl }}" class="cbp-caption cbp-singlePageInline" data-title="World Clock Widget" rel="nofollow">
-                <div class="cbp-caption-defaultWrap">
-									<img src="{{ '/img/portfolio/1.jpg'|url }}" alt="">
-                </div>
-                <div class="cbp-caption-activeWrap">
-                    <div class="cbp-l-caption-alignLeft">
-                        <div class="cbp-l-caption-body">
-                            <div class="cbp-l-caption-title"> Geometry</div>
-                            <div class="cbp-l-caption-title"> by Michel Martin</div>
-                            <div class="cbp-l-caption-title">Time creation : 12 min</div>
-                            <div class="cbp-l-caption-title">13 €</div>
-                            <button class="add-to-cart-btn">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="cbp-item web-design logos identity graphic">
-            <a href="{{ 'ajax-lightbox-gallery/project2.html'|asseturl }}" class="cbp-caption cbp-singlePageInline" data-title="Bolt UI" rel="nofollow">
-                <div class="cbp-caption-defaultWrap">
-									<img src="{{ '/img/portfolio/2.jpg'|url }}" alt="">
-                </div>
-                <div class="cbp-caption-activeWrap">
-                    <div class="cbp-l-caption-alignLeft">
-                        <div class="cbp-l-caption-body">
-                            <div class="cbp-l-caption-title"> Eiffel Tower</div>
-                            <div class="cbp-l-caption-title"> by Gustave Duffet</div>
-                            <div class="cbp-l-caption-title">Time creation : 12 min</div>
-                            <div class="cbp-l-caption-title">15 €</div>
-                            <button class="add-to-cart-btn">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="cbp-item graphic print identity">
-            <a href="{{ 'ajax-lightbox-gallery/project3.html'|asseturl }}" class="cbp-caption cbp-singlePageInline" data-title="WhereTO App" rel="nofollow">
-                <div class="cbp-caption-defaultWrap">
-									<img src="{{ '/img/portfolio/3.jpg'|url }}" alt="">
-                </div>
-                <div class="cbp-caption-activeWrap">
-                    <div class="cbp-l-caption-alignLeft">
-                        <div class="cbp-l-caption-body">
-                            <div class="cbp-l-caption-title"> Buildings</div>
-                            <div class="cbp-l-caption-title"> by Rebecca D. Powell</div>
-                            <div class="cbp-l-caption-title">Time creation : 19 min</div>
-                            <div class="cbp-l-caption-title">18 €</div>
-                            <button class="add-to-cart-btn">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="cbp-item web-design motion logos">
-            <a href="{{ 'ajax-lightbox-gallery/project4.html'|asseturl }}" class="cbp-caption cbp-singlePageInline" data-title="iDevices" rel="nofollow">
-                <div class="cbp-caption-defaultWrap">
-									<img src="{{ '/img/portfolio/4.jpg'|url }}" alt="">
-                </div>
-                <div class="cbp-caption-activeWrap">
-                    <div class="cbp-l-caption-alignLeft">
-                        <div class="cbp-l-caption-body">
-                            <div class="cbp-l-caption-title"> Christmas Tree</div>
-                            <div class="cbp-l-caption-title"> by Alphonse Morneau</div>
-                            <div class="cbp-l-caption-title">Time creation : 12 min</div>
-                            <div class="cbp-l-caption-title">10 €</div>
-                            <button class="add-to-cart-btn">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="cbp-item identity graphic print">
-            <a href="{{ 'ajax-lightbox-gallery/project5.html'|asseturl }}" class="cbp-caption cbp-singlePageInline" data-title="Seemple* Music for iPad" rel="nofollow">
-                <div class="cbp-caption-defaultWrap">
-									<img src="{{ '/img/portfolio/5.jpg'|url }}" alt="">
-                </div>
-                <div class="cbp-caption-activeWrap">
-                    <div class="cbp-l-caption-alignLeft">
-                        <div class="cbp-l-caption-body">
-                            <div class="cbp-l-caption-title"> Piano and heart</div>
-                            <div class="cbp-l-caption-title"> by Susan R. King</div>
-                            <div class="cbp-l-caption-title">Time creation : 7 min</div>
-                            <div class="cbp-l-caption-title">9 €</div>
-                            <button class="add-to-cart-btn">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="cbp-item motion print logos web-design">
-            <a href="{{ 'ajax-lightbox-gallery/project6.html'|asseturl }}" class="cbp-caption cbp-singlePageInline" data-title="Remind~Me Widget" rel="nofollow">
-                <div class="cbp-caption-defaultWrap">
-									<img src="{{ '/img/portfolio/6.jpg'|url }}" alt="">
-                </div>
-                <div class="cbp-caption-activeWrap">
-                    <div class="cbp-l-caption-alignLeft">
-                        <div class="cbp-l-caption-body">
-                            <div class="cbp-l-caption-title"> Snowflake </div>
-                            <div class="cbp-l-caption-title"> by Joshua M. Schalk</div>
-                            <div class="cbp-l-caption-title">Time creation : 11 min</div>
-                            <div class="cbp-l-caption-title">9 €</div>
-                            <button class="add-to-cart-btn">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="cbp-item graphic logos">
-            <a href="{{ 'ajax-lightbox-gallery/project7.html'|asseturl }}" class="cbp-caption cbp-singlePageInline" data-title="Workout Buddy" rel="nofollow">
-                <div class="cbp-caption-defaultWrap">
-									<img src="{{ '/img/portfolio/7.jpg'|url }}" alt="">
-                </div>
-                <div class="cbp-caption-activeWrap">
-                    <div class="cbp-l-caption-alignLeft">
-                        <div class="cbp-l-caption-body">
-                            <div class="cbp-l-caption-title"> Shoes</div>
-                            <div class="cbp-l-caption-title"> by Pascal Audibert</div>
-                            <div class="cbp-l-caption-title">Time creation : 13 min</div>
-                            <div class="cbp-l-caption-title">11 €</div>
-                            <button class="add-to-cart-btn">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="cbp-item identity print logos motion">
-            <a href="{{ 'ajax-lightbox-gallery/project8.html'|asseturl }}" class="cbp-caption cbp-singlePageInline" data-title="Digital Menu" rel="nofollow">
-                <div class="cbp-caption-defaultWrap">
-									<img src="{{ '/img/portfolio/8.jpg'|url }}" alt="">
-                </div>
-                <div class="cbp-caption-activeWrap">
-                    <div class="cbp-l-caption-alignLeft">
-                        <div class="cbp-l-caption-body">
-                            <div class="cbp-l-caption-title"> Cup of taste</div>
-                            <div class="cbp-l-caption-title"> by Laurent Sevier</div>
-                            <div class="cbp-l-caption-title">Time creation : 16 min</div>
-                            <div class="cbp-l-caption-title">15 €</div>
-                            <button class="add-to-cart-btn">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="cbp-item identity motion web-design">
-            <a href="{{ 'ajax-lightbox-gallery/project9.html'|asseturl }}" class="cbp-caption cbp-singlePageInline" data-title="Holiday Selector" rel="nofollow">
-                <div class="cbp-caption-defaultWrap">
-									<img src="{{ '/img/portfolio/9.jpg'|url }}" alt="">
-                </div>
-                <div class="cbp-caption-activeWrap">
-                    <div class="cbp-l-caption-alignLeft">
-                        <div class="cbp-l-caption-body">
-                            <div class="cbp-l-caption-title"> Venise masks </div>
-                            <div class="cbp-l-caption-title"> by Arthur Lang</div>
-                            <div class="cbp-l-caption-title">Time creation : 10 min</div>
-                            <div class="cbp-l-caption-title">12 €</div>
-                            <button class="add-to-cart-btn">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
-
-    <div id="js-loadMore-lightbox-gallery" class="cbp-l-loadMore-button">
-        <a href="{{ 'ajax-lightbox-gallery/loadMore.html'|asseturl }}" class="cbp-l-loadMore-link" rel="nofollow">
-            <span class="cbp-l-loadMore-defaultText">Load More</span>
-            <span class="cbp-l-loadMore-loadingText">Loading...</span>
-            <span class="cbp-l-loadMore-noMoreLoading">No More Works</span>
-        </a>
-    </div>
-
-    </div>
-
-
+		<!-- Top content -->
+		<div id="home" class="parallax top-content" data-stellar-background-ratio="0.3">
+			<div class="inner-bg">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-10 col-md-offset-1 top-description">
+							<h2 class="text-center">
+							Offrez à la <strong>gourmandise</strong> la dimension qu'elle mérite
+							</h2>
+							<p>A high quality chocolate which looks like nothing else</p>
+							<div class="top-button">
+								<a class="btn btn-top btn-lg" href="{{ '#OurCollection' }}"> Our collection</a>
+								<a class="btn btn-top-white btn-lg" href="{{ '#WhoWeAre' }}"> Learn More</a>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
 
+		<!-- Features -->
+		<div id="WhoWeAre" class="features-container">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 features">
+						<h3>Company, Process &#38; Delivery</h3>
+						<p>Les3Dandies presents a new culinary experience which awakens all the senses.</p>
+					</div>
+				</div>
 
-        <!-- Your Creation -->
+				<div id="accordionWhoWeAre">
+					<div class="panel">
+						<div class="col-sm-4 features-box">
+							<img src="{{ '/img/company.jpg'|url }}" height="240px" alt="">
+							<a class="btn btn-features btn-lg collapsed"  data-toggle="collapse" data-target="#OurCompany" aria-expanded="false" data-parent="#accordionWhoWeAre"> Company</a>
+						</div>
 
-        <div id="YourCreation" class="pricing-container">
-	        <div class="container">
-	            <div class="row" id="YourCreation">
-	                <div class="col-sm-12 pricing">
-	                    <h3>Your creation</h3>
-	                    <p>Upload your 3D files or Make an appointment</p>
+						<div class="col-sm-4 features-box">
+							<img src="{{ '/img/process.jpg'|url }}" height="240px" alt="">
+							<a class="btn btn-features btn-lg collapsed"  data-toggle="collapse" data-target="#OurProcess" aria-expanded="false" data-parent="#accordionWhoWeAre"> Process</a>
+						</div>
+
+						<div class="col-sm-4 features-box">
+							<img src="{{ '/img/time.jpg'|url }}" height="240px" alt="">
+							<a class="btn btn-features btn-lg collapsed"  data-toggle="collapse" data-target="#OurDelivery" aria-expanded="false" data-parent="#accordionWhoWeAre"> Delivery</a>
+						</div>
+
+						<div id="OurCompany" aria-expanded="false" class="btn-whoweare collapse">
+							<p>
+							Les3Dandies are Thibaut, Olivier and Edouard. As young epicureans, we met each other whilst studying at the renowned SKEMA Business School. Our passion for gourmet food and enthusiasm regarding new technologies encouraged us to collaborate in creating this company. From its early beginnings as just an initial idea, to the acquisition of the required machinery and sourcing of a master chocolatier - Les3Dandies was born after months of dedicated work. The goal has always been to create something that is not only delicious but also visually spectacular. This goal is now a reality and we are proud to be able to share this chocolate revolution with you.
+							</p>
+
+							<p>
+							With the expertise of our master chocolatier and 3D printing technology, Les3Dandies can create customised 3D chocolate designs. These creations offer a unique alternative to generic chocolate figurines on the market. Using only the finest quality chocolate, we are able to tailor-make any shape you may request whether it be a chocolate replica of a loved one or a box of branded chocolates. Aside from specialising in 3D creations, we also offer customised 2D chocolates and an array of hampers including other gourmet food goods. Hampers by Les3Dandies bring together other local artisanal gourmet goods - these complement the exquisite taste of our chocolate while still showcasing the 3D chocolate design as the main feature. These creations offer a new experiential way to enjoy chocolate -  savour the taste, delight in the harmony of the blended aromas, and marvel at the minute detail in the design.
+							</p>
+						</div>
+
+						<div id="OurProcess" aria-expanded="false" class="btn-whoweare collapse">
+							<p>
+							Les 3Dandies melts together the tradition of French chocolatiers with the creative possibilities that 3D technology offers. The chocolate is an original recipe of the finest quality and always sourced ethically. We offer a large range of products in an array of flavours and shapes. Our master chocolatier melts down our original chocolate and lovingly pours it into our modelling machine. Under the his eyes, the chocolate will slowly drip down to form any desired shape. The shape formed by the modelling machine is determined by the uploaded 3D file that we receive or as conceived by our inhouse designer. Once the chocolate has cooled - we are ready to wrap and send with love to you.
+							</p>
+
+							<p>
+							As well as offering customised creations, we also have an original range of creations designed in collaboration with local artists. This collection is curated by Jordi Fornes. These artistic creations are ready for immediate order.
+							</p>
+
+							<p>
+							Our chocolate is sourced fairtrade. Our production methods are designed so as to have zero wastage. The 3D chocolate technology doesn’t waste any chocolate mix. The machines are designed so as to use only the exact quantity of chocolate needed. The packaging we use is not only beautiful but made from recycled materials. To strengthen our environmental mission, we will deliver our products by bicycle service within Paris city centre. As well as committing to environmental sustainability, we hope to give back to our local community. We will source our materials and additional produce from local suppliers where possible to ensure a truly French product. We will also contribute to sustainable development in West Africa by donating a percentage of our profits to education and training for cocoa farmers to help them to increase their yields and profits.
+
+							</p>
+						</div>
+
+						<div id="OurDelivery" aria-expanded="false" class="btn-whoweare collapse">
+							<p>
+							The delivery service we offer is of a premium level. We seek to ensure that the product is not only of the highest standard but its packaging and delivery are too. Our delivery service operates meticulously an efficient service with friendly couriers arriving to your door by trendy bicycle. Les3Dandies will ensure that your orders are delivered on time, in perfect condition and with their temperature at all times moderated.
+							</p>
+
+							<p>
+							Currently we are only operating within the Paris area. Shortly we will be expanding operations to include delivery in greater France and overseas.
+							</p>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-6 toLeft">
-					<div class="price-column">
-						<h2>Upload 3D files</h2>
-						<h3>Files allowed (.stl, .vrml and .amf)</h3>
-						<ul>
-							<li>
-                            <div class="input-group">
-                                <input type="file" name="files[]" multiple class="Browser" id="Upload3DFile">
-                            </div>
-                            </li>
-							<li>Let us your phone or email and comments</li>
-							<li>
-                            <input type="tel" name="phone" class="form-control" placeholder="+1 (999) 999 9999"  id="PhoneUser" />
-                            <input type="email" name="user_email" class="form-control" placeholder="les3Dandies@gmail.com" id="MailUser" />
-                            </li>
-							<li>
-                            <!-- <textarea name='comment' id='comment' placeholder="Let some comments here."></textarea><br /> -->
-                            <div contenteditable="true" id='CommentUser'>Let some comments here.</div>
-                            </li>
-						<li><button onclick="sendUploadFile(); return false" class="btn btn-top btn-lg" data-toggle="collapse" data-target="#Validation">Validate</button></li>
-                                <div id="Validation" aria-expanded="false" class="collapse">
-                                    <p>Your file was uploaded. Your creation will be take into account in the next 24 hours.</p>
-                                </div>
-						</ul>
+		</div>
+
+		<!-- Our Collection -->
+		<div id="OurCollection" class="portfolio-container">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 portfolio" id="OurCollection">
+						<h3>Our collection</h3>
+						<p>Find your original chocolate in our collection.</p>
 					</div>
 				</div>
-				<div class="col-md-6 toIn">
-					<div class="price-column large">
-						<h2>Make an appointment</h2>
-						<h3>Call us between 9am and 7pm</h3>
-						<ul>
-							<li>Contact us : </li>
-							<li>Our Phone : (+33) X XX XX XX XX</li>
-							<li>Our email address : les3dandies@gmail.com</li>
-							<!-- <li>Cras et fermentum massa</li> -->
-						<!-- <li><button type="button" class="btn btn-top btn-lg">Validate</button></li> -->
-						</ul>
+
+				<div id="gallery">
+					<div class="panel" >
+						<button class="galleryBtn" data-toggle="collapse" data-target="#DesignerCollection" data-parent="#gallery">Designer</button>
+						<button class="galleryBtn" data-toggle="collapse" data-target="#CategoryCollection" data-parent="#gallery">Category</button>
+						<button class="galleryBtn" data-toggle="collapse" data-target="#ChocolatierCollection" data-parent="#gallery">Chocolatier</button>
+						<div id ="CategoryCollection" aria-expanded="false" class="collapse">
+							<div id="js-filters-lightbox-gallery2" class="cbp-l-filters-button cbp-l-filters-center">
+								<div data-filter="*" class="cbp-filter-item-active cbp-filter-item">All</div>
+								<div data-filter=".graphic" class="cbp-filter-item">Animal</div>
+								<div data-filter=".logos" class="cbp-filter-item">Event</div>
+								<div data-filter=".motion" class="cbp-filter-item">Gift</div>
+								<div data-filter=".logos" class="cbp-filter-item">Other</div>
+							</div>
+						</div>
+
+						<div id ="DesignerCollection" aria-expanded="false" class="collapse">
+							<div id="js-filters-lightbox-gallery2" class="cbp-l-filters-button cbp-l-filters-center">
+								<div data-filter="*" class="cbp-filter-item-active cbp-filter-item">All</div>
+								<div data-filter=".graphic" class="cbp-filter-item">Michel Martin</div>
+								<div data-filter=".logos" class="cbp-filter-item">Coralie Coulombe</div>
+								<div data-filter=".motion" class="cbp-filter-item">Michael M. Hollis</div>
+							</div>
+						</div>
+
+						<div id ="ChocolatierCollection" aria-expanded="false" class="collapse">
+							<div id="js-filters-lightbox-gallery2" class="cbp-l-filters-button cbp-l-filters-center">
+								<div data-filter="*" class="cbp-filter-item-active cbp-filter-item">All</div>
+								<div data-filter=".graphic" class="cbp-filter-item">Dark Chocolate</div>
+								<div data-filter=".logos" class="cbp-filter-item">Milk Chocolate</div>
+								<div data-filter=".motion" class="cbp-filter-item">White Chocolate</div>
+							</div>
+						</div>
 					</div>
+				</div>
+
+				<div id="js-grid-lightbox-gallery" class="cbp">
+					<div class="cbp-item web-design graphic print motion">
+						<a href="{{ 'ajax-lightbox-gallery/project1.html'|asseturl }}" class="cbp-caption cbp-singlePageInline" data-title="World Clock Widget" rel="nofollow">
+							<div class="cbp-caption-defaultWrap">
+							   <img src="{{ '/img/portfolio/1.jpg'|url }}" alt="">
+							</div>
+							<div class="cbp-caption-activeWrap">
+								<div class="cbp-l-caption-alignLeft">
+									<div class="cbp-l-caption-body">
+									   <div class="cbp-l-caption-title"> Geometry</div>
+									   <div class="cbp-l-caption-title"> by Michel Martin</div>
+									   <div class="cbp-l-caption-title">Time creation : 12 min</div>
+									   <div class="cbp-l-caption-title">13 €</div>
+									   <button class="add-to-cart-btn">Add to cart</button>
+								   </div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="cbp-item web-design logos identity graphic">
+						<a href="{{ 'ajax-lightbox-gallery/project2.html'|asseturl }}" class="cbp-caption cbp-singlePageInline" data-title="Bolt UI" rel="nofollow">
+							<div class="cbp-caption-defaultWrap">
+								<img src="{{ '/img/portfolio/2.jpg'|url }}" alt="">
+							</div>
+							<div class="cbp-caption-activeWrap">
+								<div class="cbp-l-caption-alignLeft">
+									<div class="cbp-l-caption-body">
+										<div class="cbp-l-caption-title"> Eiffel Tower</div>
+										<div class="cbp-l-caption-title"> by Gustave Duffet</div>
+										<div class="cbp-l-caption-title">Time creation : 12 min</div>
+										<div class="cbp-l-caption-title">15 €</div>
+										<button class="add-to-cart-btn">Add to cart</button>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="cbp-item graphic print identity">
+						<a href="{{ 'ajax-lightbox-gallery/project3.html'|asseturl }}" class="cbp-caption cbp-singlePageInline" data-title="WhereTO App" rel="nofollow">
+							<div class="cbp-caption-defaultWrap">
+								<img src="{{ '/img/portfolio/3.jpg'|url }}" alt="">
+							</div>
+							<div class="cbp-caption-activeWrap">
+								<div class="cbp-l-caption-alignLeft">
+									<div class="cbp-l-caption-body">
+										<div class="cbp-l-caption-title"> Buildings</div>
+										<div class="cbp-l-caption-title"> by Rebecca D. Powell</div>
+										<div class="cbp-l-caption-title">Time creation : 19 min</div>
+										<div class="cbp-l-caption-title">18 €</div>
+										<button class="add-to-cart-btn">Add to cart</button>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="cbp-item web-design motion logos">
+						<a href="{{ 'ajax-lightbox-gallery/project4.html'|asseturl }}" class="cbp-caption cbp-singlePageInline" data-title="iDevices" rel="nofollow">
+							<div class="cbp-caption-defaultWrap">
+								<img src="{{ '/img/portfolio/4.jpg'|url }}" alt="">
+							</div>
+							<div class="cbp-caption-activeWrap">
+								<div class="cbp-l-caption-alignLeft">
+									<div class="cbp-l-caption-body">
+										<div class="cbp-l-caption-title"> Christmas Tree</div>
+										<div class="cbp-l-caption-title"> by Alphonse Morneau</div>
+										<div class="cbp-l-caption-title">Time creation : 12 min</div>
+										<div class="cbp-l-caption-title">10 €</div>
+										<button class="add-to-cart-btn">Add to cart</button>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="cbp-item identity graphic print">
+						<a href="{{ 'ajax-lightbox-gallery/project5.html'|asseturl }}" class="cbp-caption cbp-singlePageInline" data-title="Seemple* Music for iPad" rel="nofollow">
+							<div class="cbp-caption-defaultWrap">
+								<img src="{{ '/img/portfolio/5.jpg'|url }}" alt="">
+							</div>
+							<div class="cbp-caption-activeWrap">
+								<div class="cbp-l-caption-alignLeft">
+									<div class="cbp-l-caption-body">
+										<div class="cbp-l-caption-title"> Piano and heart</div>
+										<div class="cbp-l-caption-title"> by Susan R. King</div>
+										<div class="cbp-l-caption-title">Time creation : 7 min</div>
+										<div class="cbp-l-caption-title">9 €</div>
+										<button class="add-to-cart-btn">Add to cart</button>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="cbp-item motion print logos web-design">
+						<a href="{{ 'ajax-lightbox-gallery/project6.html'|asseturl }}" class="cbp-caption cbp-singlePageInline" data-title="Remind~Me Widget" rel="nofollow">
+							<div class="cbp-caption-defaultWrap">
+								<img src="{{ '/img/portfolio/6.jpg'|url }}" alt="">
+							</div>
+							<div class="cbp-caption-activeWrap">
+								<div class="cbp-l-caption-alignLeft">
+									<div class="cbp-l-caption-body">
+										<div class="cbp-l-caption-title"> Snowflake </div>
+										<div class="cbp-l-caption-title"> by Joshua M. Schalk</div>
+										<div class="cbp-l-caption-title">Time creation : 11 min</div>
+										<div class="cbp-l-caption-title">9 €</div>
+									   <button class="add-to-cart-btn">Add to cart</button>
+								   </div>
+							   </div>
+							</div>
+						</a>
+					</div>
+					<div class="cbp-item graphic logos">
+						<a href="{{ 'ajax-lightbox-gallery/project7.html'|asseturl }}" class="cbp-caption cbp-singlePageInline" data-title="Workout Buddy" rel="nofollow">
+							<div class="cbp-caption-defaultWrap">
+						  <img src="{{ '/img/portfolio/7.jpg'|url }}" alt="">
+							</div>
+							<div class="cbp-caption-activeWrap">
+								<div class="cbp-l-caption-alignLeft">
+									<div class="cbp-l-caption-body">
+										<div class="cbp-l-caption-title"> Shoes</div>
+										<div class="cbp-l-caption-title"> by Pascal Audibert</div>
+										<div class="cbp-l-caption-title">Time creation : 13 min</div>
+										<div class="cbp-l-caption-title">11 €</div>
+										<button class="add-to-cart-btn">Add to cart</button>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="cbp-item identity print logos motion">
+						<a href="{{ 'ajax-lightbox-gallery/project8.html'|asseturl }}" class="cbp-caption cbp-singlePageInline" data-title="Digital Menu" rel="nofollow">
+							<div class="cbp-caption-defaultWrap">
+								<img src="{{ '/img/portfolio/8.jpg'|url }}" alt="">
+							</div>
+							<div class="cbp-caption-activeWrap">
+								<div class="cbp-l-caption-alignLeft">
+									<div class="cbp-l-caption-body">
+										<div class="cbp-l-caption-title"> Cup of taste</div>
+										<div class="cbp-l-caption-title"> by Laurent Sevier</div>
+										<div class="cbp-l-caption-title">Time creation : 16 min</div>
+										<div class="cbp-l-caption-title">15 €</div>
+										<button class="add-to-cart-btn">Add to cart</button>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="cbp-item identity motion web-design">
+						<a href="{{ 'ajax-lightbox-gallery/project9.html'|asseturl }}" class="cbp-caption cbp-singlePageInline" data-title="Holiday Selector" rel="nofollow">
+							<div class="cbp-caption-defaultWrap">
+								<img src="{{ '/img/portfolio/9.jpg'|url }}" alt="">
+							</div>
+							<div class="cbp-caption-activeWrap">
+								<div class="cbp-l-caption-alignLeft">
+									<div class="cbp-l-caption-body">
+										<div class="cbp-l-caption-title"> Venise masks </div>
+										<div class="cbp-l-caption-title"> by Arthur Lang</div>
+										<div class="cbp-l-caption-title">Time creation : 10 min</div>
+										<div class="cbp-l-caption-title">12 €</div>
+										<button class="add-to-cart-btn">Add to cart</button>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+
+				<div id="js-loadMore-lightbox-gallery" class="cbp-l-loadMore-button">
+					<a href="{{ 'ajax-lightbox-gallery/loadMore.html'|asseturl }}" class="cbp-l-loadMore-link" rel="nofollow">
+						<span class="cbp-l-loadMore-defaultText">Load More</span>
+						<span class="cbp-l-loadMore-loadingText">Loading...</span>
+						<span class="cbp-l-loadMore-noMoreLoading">No More Works</span>
+					</a>
 				</div>
 			</div>
-			
-					</div>
-	
 		</div>
 
 
-   
-                <!-- Our Team -->
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 testimonials" id="OurTeam">
-                    <h3>Our Team</h3>
-                </div>
-                <div class="col-lg-12 col-md-12 col-sm-12" id="Les3DandiesImg">
-                    <img src="{{ '/img/testimonials/founders.jpg'|asseturl }}">
-                    <h4>Put some information about Les3Dandies' Members.</h4>
-                </div>
-                <div class="col-sm-4" id="OurTeam">
-                    <img src="{{ '/img/testimonials/edouard.jpg'|asseturl }}" alt="" class="img-responsive img-thumbnail" id="Member"/>
-                    <h4>
-                    Edouard
-                    </h4>
-                </div>
-
-                <div class="col-sm-4" id="OurTeam">
-                    <img src="{{ '/img/testimonials/olivier.jpg'|asseturl }}" alt="" class="img-responsive img-thumbnail" id="Member"/>
-                    <h4>
-                    Olivier
-                    </h4>
-                </div>
-
-                <div class="col-sm-4" id="OurTeam">
-                    <img src="{{ '/img/testimonials/thibaut.jpg'|asseturl }}" alt="" class="img-responsive img-thumbnail" id="Member"/>
-                    <h4>
-                    Thibaut
-                    </h4>
-                </div>
-
-                <!-- <div class="col-sm-3 testimonials" id="OurTeam">
-                    <img src="{{ '/img/testimonials/4.jpg'|asseturl }}" alt="" class="img-responsive img-thumbnail" />
-                    <h4>
-                    Information Person 4
-                    </h4>
-                </div> -->
-
-                    </div>
-                    </div>
-            </div>
-
-        
-        <!-- Contact us -->
-        <div id="contact-section" class="contact-container">
-
-            <div class="inner-contact">
-        <div class="container">
-            <div class="row" id="ContactUs">
-                <div class="col-sm-12 contact">
-                    <h3>Contact Us</h3>
-                    <p>
-                    	Please contact us for some information.
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-7 col-md-7 col-sm-7 form-group contact-form">
-                    <h4>Send Message</h4>
-                    <form method="post" action="assets/contact.php">
-                        <input type="text" name="email" placeholder="Email" class="form-control contact-email" id="EmailUser">
-                        <input type="text" name="subject" placeholder="Subject" class="form-control contact-subject" id="Subject">
-                        <textarea name="message" class="form-control" placeholder="Message" id="Message"></textarea>
-                        <button onclick="sendMail(); return false" class="btn btn-contact">Submit</button>
-                    </form>
-                </div>
-                <div class="col-lg-5 col-md-5 col-sm-5 contact-address contact-about">
-                    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
-                    <div style='overflow:hidden;height:350px;width:600px;'>
-                        <div id='gmap_canvas' style='height:350px;width:600px;'></div>
-                        <div><small><a href="http://youtubeembedcode.com">embed youtube code</a></small></div>
-                        <!-- <style>#gmap_canvas img{max-width:none!important;background:none!important}</style> -->
-                    </div>
-                    <h4>About Us</h4>
-                    <p>Sentence here (about us)</p>
-                    <h4>Address</h4>
-                    <p><i class="fa fa-map-marker"></i>100 rue du Chemin, Paris, France</p>
-                    <p><i class="fa fa-envelope-o"></i>les3dandies@gmail.com</p>
-                    <p><i class="fa fa-phone"></i>Phone: (+33) X XX XX XX XX</p>
-                </div>
-                <!-- <div class="col-lg-4 col-md-4 col-sm-4"> -->
-                    
-                <!-- </div> -->
-            </div>
-          </div>
-        </div>
-        </div>
-
-
-        <!-- Partners -->
-        <div id="footer">
-            <h3>Our partners</h3>
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Wrapper for slides -->
-              <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                  <div class="row">
-                    <img src="{{ '/img/partners/logo1.png'|asseturl }}" alt="Chania">
-                    <img src="{{ '/img/partners/logo2.png'|asseturl }}" alt="Chania">
-                    <img src="{{ '/img/partners/logo3.png'|asseturl }}" alt="Chania">
-                    <img src="{{ '/img/partners/logo4.png'|asseturl }}" alt="Chania">
-                  </div>
-                </div>
-
-                <div class="item">
-                  <div class="row">
-                    <img src="{{ '/img/partners/logo5.png'|asseturl }}" alt="Chania">
-                    <img src="{{ '/img/partners/logo6.png'|asseturl }}" alt="Chania">
-                    <img src="{{ '/img/partners/logo7.png'|asseturl }}" alt="Chania">
-                    <img src="{{ '/img/partners/logo8.png'|asseturl }}" alt="Chania">
-                  </div>
-                </div>
-
-                <div class="item">
-                  <div class="row">
-                    <img src="{{ '/img/partners/logo9.png'|asseturl }}" alt="Chania">
-                    <img src="{{ '/img/partners/logo10.png'|asseturl }}" alt="Chania">
-                    <img src="{{ '/img/partners/logo11.png'|asseturl }}" alt="Chania">
-                    <img src="{{ '/img/partners/logo12.png'|asseturl }}" alt="Chania">
-                  </div>
-                </div>
-              </div>
-            </div>
-        </div>
-
-    <!-- footer -->
-	<div id="footer">
-	<h3>Follow Us!</h3>
-	<p>Follow us on social networks or discover our new creations on instagram!</p>
-	<div class="follow-us">
-                        <a href="{{ '#'|asseturl }}" class="social-icon"><i class="fa fa-facebook"></i></a>
-                        <a href="{{ '#'|asseturl }}" class="social-icon"><i class="fa fa-twitter"></i></a>
-                        <a href="{{ '#'|asseturl }}" class="social-icon"><i class="fa fa-linkedin"></i></a>
-                        <a href="{{ '#'|asseturl }}" class="social-icon"><i class="fa fa-pinterest"></i></a>
-                        <a href="{{ '#'|asseturl }}" class="social-icon"><i class="fa fa-instagram"></i></a>
+		<!-- Your Creation -->
+		<div id="YourCreation" class="pricing-container">
+			<div class="container">
+				<div class="row" id="YourCreation">
+					<div class="col-sm-12 pricing">
+						<h3>Your creation</h3>
+						<p>Upload your 3D files or Make an appointment</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 toLeft">
+						<div class="price-column">
+							<h2>Upload 3D files</h2>
+							<h3>Files allowed (.stl, .vrml and .amf)</h3>
+							<ul>
+								<li>
+									<div class="input-group">
+										<input type="file" name="files[]" multiple class="Browser" id="Upload3DFile">
+									</div>
+								</li>
+								<li>
+									Let us your phone or email and comments
+								</li>
+								<li>
+									<input type="tel" name="phone" class="form-control" placeholder="+1 (999) 999 9999"  id="PhoneUser" />
+									<input type="email" name="user_email" class="form-control" placeholder="les3Dandies@gmail.com" id="MailUser" />
+								</li>
+								<li>
+									<div contenteditable="true" id='CommentUser'>Let some comments here.</div>
+								</li>
+								<li>
+									<button onclick="sendUploadFile(); return false" class="btn btn-top btn-lg" data-toggle="collapse" data-target="#Validation">Validate</button>
+								</li>
+								<div id="Validation" aria-expanded="false" class="collapse">
+									<p>Your file was uploaded. Your creation will be take into account in the next 24 hours.</p>
+								</div>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6 toIn">
+						<div class="price-column large">
+							<h2>Make an appointment</h2>
+							<h3>Call us between 9am and 7pm</h3>
+							<ul>
+								<li>Contact us : </li>
+								<li>Our Phone : (+33) X XX XX XX XX</li>
+								<li>Our email address : les3dandies@gmail.com</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-	</div>
-	<!-- footer 2 -->
-	<div id="footer2">
+
+		<!-- Our Team -->
 		<div class="container">
-			<div class="row">
-				<div class="col-sm-12">
-				<div class="copyright">&copy;Les3Dandies
+			<div class="row" id="OurTeam">
+				<div class="col-sm-12 testimonials">
+					<h3>Our Team</h3>
+				</div>
+				<div class="col-lg-12 col-md-12 col-sm-12" id="Les3DandiesImg">
+					<img src="{{ '/img/team/founders.jpg'|asseturl }}">
+					<h4>
+						<!-- Nous (Thibaut, Olivier et Edouard) nous sommes rencontrés sur les bancs de SKEMA Business School. Animés par le même désir d’entreprendre, nous nous sommes découverts des passions communes dans les nouvelles technologies et la cuisine. C’est ainsi que les 3Dandies sont nés avec en son sein trois entrepreneurs désireux d’offrir un service unique et raffiné. -->
+						Edouard, Olivier and Thibaut met at SKEMA Business School. Motivated by the same desire to undertake, they found out the same passions in fields of new technologies and cooking. Les3Dandies were born thanks to three businessmen who want to offer a unique and elegant service.
+					</h4>
+				</div>
+				<div class="col-sm-4">
+					<img src="{{ '/img/team/edouard.jpg'|asseturl }}" alt="" class="img-responsive img-thumbnail" id="Member"/>
+					<h4>
+					<strong>Edouard Bonissol</strong>
+					</h4> 
+					<h5 id="infoPerson">
+					<!-- est associé en charge des directions commerciale et artistique. Ses capacités d’analyse, de leadership et son expérience des start-up seront profitables au projet. -->
+					is partner, Chief Creative Officer and Chief Business Officer. His creativity and leadership skills, associated with his start-up experience will be profitable to the project.
+					</h5>
+				</div>
+				<div class="col-sm-4">
+					<img src="{{ '/img/team/olivier.jpg'|asseturl }}" alt="" class="img-responsive img-thumbnail" id="Member"/>
+					<h4>
+					<strong>Olivier Meunier</strong>
+					</h4> 
+					<h5 id="infoPerson">
+					<!-- est associé en charge des directions financière et opérationnelle. Grâce à ses expériences en Corporate Finance, Olivier a développé des qualités de gestion. -->
+					is the partner, Chief Financial Officer and Chief Operational Officer. Thanks to his Corporate Finance background, Olivier developped management and analysis skills.
+					</h5>
+				</div>
+				<div class="col-sm-4">
+					<img src="{{ '/img/team/thibaut.jpg'|asseturl }}" alt="" class="img-responsive img-thumbnail" id="Member"/>
+					<h4>
+					<strong>Thibaut Saras</strong>
+					</h4> 
+					<h5 id="infoPerson">
+					<!-- Président des 3Dandies, possède un esprit entrepreneurial développé et une grande curiosité qui lui a permis d’acquérir des compétences en modélisation 3D. -->
+					is President of Les3Dandies. Thanks to his business development background, he developed an entrepreneurial mindset and owns a great curiosity who allows him to acquire skills in 3D modelling.
+					</h5>
+				</div>
+			</div>
+		</div>
+
+		
+		<!-- Contact us -->
+		<div id="contact-section" class="contact-container">
+			<div class="inner-contact">
+				<div class="container">
+					<div class="row" id="ContactUs">
+						<div class="col-sm-12 contact">
+							<h3>Contact Us</h3>
+							<p>
+								Please contact us for some information.
+							</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-7 col-md-7 col-sm-7 form-group contact-form">
+							<h4>Send Message</h4>
+							<form method="post" action="assets/contact.php">
+								<input type="text" name="email" placeholder="Email" class="form-control contact-email" id="EmailUser">
+								<input type="text" name="subject" placeholder="Subject" class="form-control contact-subject" id="Subject">
+								<textarea name="message" class="form-control" placeholder="Message" id="Message"></textarea>
+								<button onclick="sendMail(); return false" class="btn btn-contact">Submit</button>
+							</form>
+						</div>
+						<div class="col-lg-5 col-md-5 col-sm-5 contact-address contact-about">
+							<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+							<div style='overflow:hidden;height:350px;width:600px;'>
+								<div id='gmap_canvas' style='height:350px;width:600px;'></div>
+								<div><small><a href="http://youtubeembedcode.com">embed youtube code</a></small></div>
+								<!-- <style>#gmap_canvas img{max-width:none!important;background:none!important}</style> -->
+							</div>
+							<h4>About Us</h4>
+							<p>Sentence here (about us)</p>
+							<h4>Address</h4>
+							<p><i class="fa fa-map-marker"></i>100 rue du Chemin, Paris, France</p>
+							<p><i class="fa fa-envelope-o"></i>les3dandies@gmail.com</p>
+							<p><i class="fa fa-phone"></i>Phone: (+33) X XX XX XX XX</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- Partners -->
+		<div id="footer">
+			<h3>Our partners</h3>
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner" role="listbox">
+					<div class="item active">
+						<div class="row">
+							<img src="{{ '/img/partners/logo1.png'|asseturl }}" alt="Chania">
+							<img src="{{ '/img/partners/logo2.png'|asseturl }}" alt="Chania">
+							<img src="{{ '/img/partners/logo3.png'|asseturl }}" alt="Chania">
+							<img src="{{ '/img/partners/logo4.png'|asseturl }}" alt="Chania">
+						</div>
+					</div>
+
+					<div class="item">
+						<div class="row">
+							<img src="{{ '/img/partners/logo5.png'|asseturl }}" alt="Chania">
+							<img src="{{ '/img/partners/logo6.png'|asseturl }}" alt="Chania">
+							<img src="{{ '/img/partners/logo7.png'|asseturl }}" alt="Chania">
+							<img src="{{ '/img/partners/logo8.png'|asseturl }}" alt="Chania">
+						</div>
+					</div>
+
+					<div class="item">
+						<div class="row">
+							<img src="{{ '/img/partners/logo9.png'|asseturl }}" alt="Chania">
+							<img src="{{ '/img/partners/logo10.png'|asseturl }}" alt="Chania">
+							<img src="{{ '/img/partners/logo11.png'|asseturl }}" alt="Chania">
+							<img src="{{ '/img/partners/logo12.png'|asseturl }}" alt="Chania">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- footer -->
+		<div id="footer">
+			<h3>Follow Us!</h3>
+			<p>Follow us on social networks or discover our new creations on instagram!</p>
+			<div class="follow-us">
+				<a href="{{ '#'|asseturl }}" class="social-icon"><i class="fa fa-facebook"></i></a>
+				<a href="{{ '#'|asseturl }}" class="social-icon"><i class="fa fa-twitter"></i></a>
+				<a href="{{ '#'|asseturl }}" class="social-icon"><i class="fa fa-linkedin"></i></a>
+				<a href="{{ '#'|asseturl }}" class="social-icon"><i class="fa fa-pinterest"></i></a>
+				<a href="{{ '#'|asseturl }}" class="social-icon"><i class="fa fa-instagram"></i></a>
+			</div>
+		</div>
+
+		<!-- footer 2 -->
+		<div id="footer2">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="copyright">&copy;Les3Dandies
 							<script type="text/javascript">
 							//<![CDATA[
 								var d = new Date()
 								document.write(d.getFullYear())
 								//]]>
-								</script>
-							  - <a href="{{ 'http://www.les3dandies.com/'|asseturl }}">www.les3dandies.com</a>
-						</div>
+							</script>
+							 - <a href="{{ 'http://www.les3dandies.com/'|asseturl }}">www.les3dandies.com</a>
 						</div>
 					</div>
 				</div>
-					</div>
-                 <!-- STYLE SWITCHER - ONLY FOR DEMO NOT INCLUDED IN MAIN FILES-->
-  <div id="style-switcher">
-    <!-- <h2>Choose colors <a href="{{ '#'|asseturl }}"><span i class="fa fa-cogs" aria-hidden="true"></span></a></h2> -->
+			</div>
+		</div>
+		<div id="style-switcher">
+			<div>
+				<ul class="colors" id="color1">
+					<li><a href="{{ '#'|asseturl }}" class="style1" title="default"></a></li>
+					<li><a href="{{ '#'|asseturl }}" class="style2" title="blue"></a></li>
+					<li><a href="{{ '#'|asseturl }}" class="style3" title="lime"></a></li>
+					<li><a href="{{ '#'|asseturl }}" class="style4" title="green"></a></li>
+					<li><a href="{{ '#'|asseturl }}" class="style5" title="red"></a></li>
+					<li><a href="{{ '#'|asseturl }}" class="style6" title="purple"></a></li>
+					<li><a href="{{ '#'|asseturl }}" class="style7" title="brown"></a></li>
+					<li><a href="{{ '#'|asseturl }}" class="style8" title="orange"></a></li>
+					<li><a href="{{ '#'|asseturl }}" class="style9" title="yellow"></a></li>
+				</ul>
+			</div>
+		</div>  <!-- END OF STYLE SWITCHER -->
 
+		<!-- Javascript -->
+		<script src="{{ '/js/jquery-1.10.2.min.js'|asseturl }}"></script>
+		<script src="{{ '/bootstrap/js/bootstrap.min.js'|asseturl }}"></script>
+		<script src="{{ '/js/retina-1.1.0.min.js'|asseturl }}"></script>
+		<script src="{{ '/js/jquery.easing.1.3.min.js'|asseturl }}"></script>
+		<script src="{{ '/js/jquery.stellar.min.js'|asseturl }}" type="text/javascript"></script>
+		<script src="{{ '/owl-carousel/owl.carousel.min.js'|asseturl }}"></script>
+		<script src="{{ '/cubeportfolio/js/jquery.cubeportfolio.min.js'|asseturl }}"></script>
+		<script src="{{ '/js/cube.js'|asseturl }}"></script>
+		<script src="{{ '/js/script.js'|asseturl }}"></script>
+		<script src="{{ '/js/main.js'|asseturl }}"></script>
 
-    <div>
-      <ul class="colors" id="color1">
-        <li><a href="{{ '#'|asseturl }}" class="style1" title="default"></a></li>
-        <li><a href="{{ '#'|asseturl }}" class="style2" title="blue"></a></li>
-        <li><a href="{{ '#'|asseturl }}" class="style3" title="lime"></a></li>
-        <li><a href="{{ '#'|asseturl }}" class="style4" title="green"></a></li>
-        <li><a href="{{ '#'|asseturl }}" class="style5" title="red"></a></li>
-        <li><a href="{{ '#'|asseturl }}" class="style6" title="purple"></a></li>
-        <li><a href="{{ '#'|asseturl }}" class="style7" title="brown"></a></li>
-        <li><a href="{{ '#'|asseturl }}" class="style8" title="orange"></a></li>
-        <li><a href="{{ '#'|asseturl }}" class="style9" title="yellow"></a></li>
+		<script>
+			function sendMail() {
+				var link = "mailto:lestroisdandies@gmail.com"
+				+ "?cc=" + escape(document.getElementById('EmailUser').value)
+				+ "&subject=" + escape(document.getElementById('Subject').value)
+				+ "&body=" + escape(document.getElementById('Message').value)
+				;
+				window.location.href = link;
+			}
+			function sendMailWithFile() {
+				var link = "mailto:lestroisdandies@gmail.com"
+				+ "?cc=" + escape(document.getElementById('EmailUser').value)
+				+ "&subject=" + escape(document.getElementById('Subject').value)
+				+ "&body=" + escape(document.getElementById('PhoneUser').value)
+				+ escape(document.getElementById('MailUser').value)
+				;
+				window.location.href = link;
+			}
 
-      </ul>
-    </div>
-  </div>  <!-- END OF STYLE SWITCHER -->
+			function init_map(){
+				var myOptions = {
+					zoom:13,center:new google.maps.LatLng(48.856614,2.3522219000000177),
+					mapTypeId: google.maps.MapTypeId.ROADMAP
+				};
+				map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+				marker = new google.maps.Marker({
+					map: map,position: new google.maps.LatLng(48.856614,2.3522219000000177)
+				});
+				infowindow = new google.maps.InfoWindow({
+					content:'<strong>Titre</strong><br>Paris, France<br>'
+				});
+				google.maps.event.addListener(marker, 'click', function(){
+					infowindow.open(map,marker);
+				});
+				infowindow.open(map,marker);
+			}
+			google.maps.event.addDomListener(window, 'load', init_map);
+		</script>
 
-        <!-- Javascript -->
-        <script src="{{ '/js/jquery-1.10.2.min.js'|asseturl }}"></script>
-        <script src="{{ '/bootstrap/js/bootstrap.min.js'|asseturl }}"></script>
-        <script src="{{ '/js/retina-1.1.0.min.js'|asseturl }}"></script>
-        <script src="{{ '/js/jquery.easing.1.3.min.js'|asseturl }}"></script>
-        <script src="{{ '/js/jquery.stellar.min.js'|asseturl }}" type="text/javascript"></script>
-        <script src="{{ '/owl-carousel/owl.carousel.min.js'|asseturl }}"></script>
-        <script src="{{ '/cubeportfolio/js/jquery.cubeportfolio.min.js'|asseturl }}"></script>
-        <script src="{{ '/js/cube.js'|asseturl }}"></script>
-        <script src="{{ '/js/script.js'|asseturl }}"></script>
-        <script src="{{ '/js/main.js'|asseturl }}"></script>
+		<script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
 
-        <script>
-        function sendMail() {
-            var link = "mailto:lestroisdandies@gmail.com"
-            + "?cc=" + escape(document.getElementById('EmailUser').value)
-            + "&subject=" + escape(document.getElementById('Subject').value)
-            + "&body=" + escape(document.getElementById('Message').value)
-            ;
-            window.location.href = link;
-        }
-        function sendMailWithFile() {
-            var link = "mailto:lestroisdandies@gmail.com"
-            + "?cc=" + escape(document.getElementById('EmailUser').value)
-            + "&subject=" + escape(document.getElementById('Subject').value)
-            + "&body=" + escape(document.getElementById('PhoneUser').value)
-            + escape(document.getElementById('MailUser').value)
-            ;
-            window.location.href = link;
-        }
-
-        function init_map(){
-            var myOptions = {
-                zoom:13,center:new google.maps.LatLng(48.856614,2.3522219000000177),
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            };
-            map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
-            marker = new google.maps.Marker({
-                map: map,position: new google.maps.LatLng(48.856614,2.3522219000000177)
-            });
-            infowindow = new google.maps.InfoWindow({
-                content:'<strong>Titre</strong><br>Paris, France<br>'
-            });
-            google.maps.event.addListener(marker, 'click', function(){
-                infowindow.open(map,marker);
-            });
-            infowindow.open(map,marker);
-        }
-        google.maps.event.addDomListener(window, 'load', init_map);
-        </script>
-
-        <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
-
-    </body>
-
+	</body>
 </html>
 

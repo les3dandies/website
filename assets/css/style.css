@@ -1069,6 +1069,12 @@ line-height: 24px;}
 
 /***** Testimonials *****/
 
+#infoPerson{
+  opacity: 0.3;
+}
+#infoPerson:hover{
+  opacity: 1;
+}
 #Les3DandiesImg{
   text-align: center;
   width: 75%;
@@ -1083,6 +1089,10 @@ line-height: 24px;}
   height: 250px;
   width: 225px;
   border-radius: 30px;
+}
+
+#OurTeam h4,h5{
+  text-align: justify;
 }
 
 .testimonials {
